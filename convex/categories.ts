@@ -85,3 +85,27 @@ export const addCategory = mutation({
     });
   },
 });
+
+export const updateCategory = mutation({
+  args: {
+    id: v.id("categories"),
+    name: v.string(),
+  },
+  handler: async (ctx, args) => {
+    await ctx.db.patch(args.id, { name: args.name });
+  },
+});
+
+export const reorderCategories = mutation({
+  args: {
+    updates: v.array(v.object({
+      id: v.id("categories"),
+      sortOrder: v.number(),
+    })),
+  },
+  handler: async (ctx, args) => {
+    for (const update of args.updates) {
+      await ctx.db.patch(update.id, { sortOrder: update.sortOrder });
+    }
+  },
+});

@@ -25,3 +25,10 @@ export const create = mutation({
     return await ctx.db.insert("incomeEntries", args);
   },
 });
+
+export const remove = mutation({
+  args: { id: v.id("incomeEntries") },
+  handler: async (ctx, args) => {
+    await ctx.db.delete(args.id);
+  },
+});
