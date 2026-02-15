@@ -2,6 +2,7 @@
 
 import { formatCurrency } from "@/lib/currencies";
 import type { Id, Doc } from "../../../convex/_generated/dataModel";
+import { SwipeableRow } from "./SwipeableRow";
 
 interface TransactionRowProps {
   transaction: Doc<"transactions">;
@@ -10,6 +11,7 @@ interface TransactionRowProps {
   accountName: string;
   currency: string;
   onEdit: (id: Id<"transactions">) => void;
+  onDelete: (id: Id<"transactions">) => void;
 }
 
 export function TransactionRow({
@@ -19,6 +21,7 @@ export function TransactionRow({
   accountName,
   currency,
   onEdit,
+  onDelete,
 }: TransactionRowProps) {
   const formattedDate = new Date(transaction.date + "T00:00:00").toLocaleDateString(
     "en-US",
@@ -42,24 +45,29 @@ export function TransactionRow({
         <span />
       </div>
 
-      {/* Mobile */}
-      <div
-        className="md:hidden px-4 py-3 hover:bg-accent/50 rounded-md cursor-pointer"
-        onClick={() => onEdit(transaction._id)}
+      {/* Mobile — swipeable */}
+      <SwipeableRow
+        onEdit={() => onEdit(transaction._id)}
+        onDelete={() => onDelete(transaction._id)}
       >
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-muted-foreground">{formattedDate}</span>
-          <span className="font-medium text-sm text-destructive">
-            -{formatCurrency(transaction.amount, currency)}
-          </span>
+        <div
+          className="px-4 py-3 hover:bg-accent/50 rounded-md cursor-pointer"
+          onClick={() => onEdit(transaction._id)}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-xs text-muted-foreground">{formattedDate}</span>
+            <span className="font-medium text-sm text-destructive">
+              -{formatCurrency(transaction.amount, currency)}
+            </span>
+          </div>
+          <div className="flex items-center justify-between mt-0.5">
+            <span className="font-medium text-sm truncate">{payeeName}</span>
+            <span className="text-xs text-muted-foreground truncate ml-2">
+              {categoryName ?? "Uncategorized"}
+            </span>
+          </div>
         </div>
-        <div className="flex items-center justify-between mt-0.5">
-          <span className="font-medium text-sm truncate">{payeeName}</span>
-          <span className="text-xs text-muted-foreground truncate ml-2">
-            {categoryName ?? "Uncategorized"}
-          </span>
-        </div>
-      </div>
+      </SwipeableRow>
     </>
   );
 }

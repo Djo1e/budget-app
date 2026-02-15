@@ -152,6 +152,16 @@ export default function TransactionsPage() {
     [removeTx]
   );
 
+  const handleSwipeDelete = useCallback(
+    async (id: Id<"transactions">) => {
+      if (window.confirm("Delete this transaction?")) {
+        await removeTx({ id });
+        toast.success("Transaction deleted");
+      }
+    },
+    [removeTx]
+  );
+
   function handleNLParsed(result: ParseTransactionResponse) {
     const allCategories = (categoryGroups ?? []).flatMap((g) => g.categories);
     const matchedCategory = result.categoryName
@@ -253,6 +263,7 @@ export default function TransactionsPage() {
               accountName={accountMap[tx.accountId]?.name ?? "Unknown"}
               currency={currency}
               onEdit={handleEdit}
+              onDelete={handleSwipeDelete}
             />
           ))}
         </div>
