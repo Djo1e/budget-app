@@ -10,6 +10,7 @@ import { AccountCard } from "@/components/accounts/AccountCard";
 import { AccountFormDrawer } from "@/components/accounts/AccountFormDrawer";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import { toast } from "sonner";
 
 export default function AccountsPage() {
   const { userProfile } = useAuthGuard();
@@ -51,12 +52,16 @@ export default function AccountsPage() {
       initialBalance: number;
     }) => {
       if (!userId) return;
-      if (editingAccount) {
-        await updateAccount({ id: editingAccount._id, ...data });
-      } else {
-        await createAccount({ userId, ...data });
+      try {
+        if (editingAccount) {
+          await updateAccount({ id: editingAccount._id, ...data });
+        } else {
+          await createAccount({ userId, ...data });
+        }
+        setEditingAccount(null);
+      } catch {
+        toast.error("Failed to save account");
       }
-      setEditingAccount(null);
     },
     [userId, editingAccount, createAccount, updateAccount]
   );
@@ -74,7 +79,12 @@ export default function AccountsPage() {
 
   const handleDelete = useCallback(
     async (id: Id<"accounts">) => {
-      await removeAccount({ id });
+      try {
+        await removeAccount({ id });
+        toast.success("Account deleted");
+      } catch {
+        toast.error("Failed to delete account");
+      }
     },
     [removeAccount]
   );

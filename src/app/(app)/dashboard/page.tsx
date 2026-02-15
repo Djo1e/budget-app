@@ -108,16 +108,20 @@ export default function DashboardPage() {
     notes?: string;
   }) {
     if (!userId) return;
-    const payeeId = await getOrCreatePayee({ userId, name: data.payeeName });
-    await createTx({
-      userId,
-      amount: data.amount,
-      date: data.date,
-      payeeId,
-      categoryId: data.categoryId,
-      accountId: data.accountId,
-      notes: data.notes,
-    });
+    try {
+      const payeeId = await getOrCreatePayee({ userId, name: data.payeeName });
+      await createTx({
+        userId,
+        amount: data.amount,
+        date: data.date,
+        payeeId,
+        categoryId: data.categoryId,
+        accountId: data.accountId,
+        notes: data.notes,
+      });
+    } catch {
+      toast.error("Failed to add transaction");
+    }
   }
 
   function handleNLParsed(result: ParseTransactionResponse) {

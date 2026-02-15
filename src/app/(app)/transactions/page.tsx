@@ -102,33 +102,37 @@ export default function TransactionsPage() {
       notes?: string;
     }) => {
       if (!userId) return;
-      const payeeId = await getOrCreatePayee({
-        userId,
-        name: data.payeeName,
-      });
-
-      if (editingTx) {
-        await updateTx({
-          id: editingTx._id,
-          amount: data.amount,
-          date: data.date,
-          payeeId,
-          categoryId: data.categoryId,
-          accountId: data.accountId,
-          notes: data.notes,
-        });
-      } else {
-        await createTx({
+      try {
+        const payeeId = await getOrCreatePayee({
           userId,
-          amount: data.amount,
-          date: data.date,
-          payeeId,
-          categoryId: data.categoryId,
-          accountId: data.accountId,
-          notes: data.notes,
+          name: data.payeeName,
         });
+
+        if (editingTx) {
+          await updateTx({
+            id: editingTx._id,
+            amount: data.amount,
+            date: data.date,
+            payeeId,
+            categoryId: data.categoryId,
+            accountId: data.accountId,
+            notes: data.notes,
+          });
+        } else {
+          await createTx({
+            userId,
+            amount: data.amount,
+            date: data.date,
+            payeeId,
+            categoryId: data.categoryId,
+            accountId: data.accountId,
+            notes: data.notes,
+          });
+        }
+        setEditingTx(null);
+      } catch {
+        toast.error("Failed to save transaction");
       }
-      setEditingTx(null);
     },
     [userId, editingTx, getOrCreatePayee, createTx, updateTx]
   );
@@ -146,8 +150,13 @@ export default function TransactionsPage() {
 
   const handleDelete = useCallback(
     async (id: Id<"transactions">) => {
-      await removeTx({ id });
-      setEditingTx(null);
+      try {
+        await removeTx({ id });
+        setEditingTx(null);
+        toast.success("Transaction deleted");
+      } catch {
+        toast.error("Failed to delete transaction");
+      }
     },
     [removeTx]
   );
@@ -155,8 +164,12 @@ export default function TransactionsPage() {
   const handleSwipeDelete = useCallback(
     async (id: Id<"transactions">) => {
       if (window.confirm("Delete this transaction?")) {
-        await removeTx({ id });
-        toast.success("Transaction deleted");
+        try {
+          await removeTx({ id });
+          toast.success("Transaction deleted");
+        } catch {
+          toast.error("Failed to delete transaction");
+        }
       }
     },
     [removeTx]

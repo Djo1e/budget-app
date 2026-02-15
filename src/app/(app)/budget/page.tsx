@@ -14,6 +14,7 @@ import { AddIncomeDialog } from "@/components/budget/AddIncomeDialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Plus } from "lucide-react";
+import { toast } from "sonner";
 
 export default function BudgetPage() {
   const { userProfile } = useAuthGuard();
@@ -91,71 +92,105 @@ export default function BudgetPage() {
   }, []);
 
   const handleAssignmentCommit = useCallback(
-    (categoryId: string, amount: number) => {
+    async (categoryId: string, amount: number) => {
       if (!userId) return;
-      upsertAllocation({
-        userId,
-        month,
-        categoryId: categoryId as Id<"categories">,
-        assignedAmount: amount,
-      });
+      try {
+        await upsertAllocation({
+          userId,
+          month,
+          categoryId: categoryId as Id<"categories">,
+          assignedAmount: amount,
+        });
+      } catch {
+        toast.error("Failed to save assignment");
+      }
     },
     [userId, month, upsertAllocation]
   );
 
-  function handleAddIncome(amount: number, label: string, date: string) {
+  async function handleAddIncome(amount: number, label: string, date: string) {
     if (!userId) return;
-    createIncome({
-      userId,
-      month,
-      amount,
-      label: label || undefined,
-      date,
-    });
+    try {
+      await createIncome({
+        userId,
+        month,
+        amount,
+        label: label || undefined,
+        date,
+      });
+    } catch {
+      toast.error("Failed to add income");
+    }
   }
 
-  function handleAddCategory(groupId: Id<"categoryGroups">, name: string) {
+  async function handleAddCategory(groupId: Id<"categoryGroups">, name: string) {
     if (!userId || !groups) return;
     const group = groups.find((g) => g._id === groupId);
     const maxSort = group
       ? Math.max(0, ...group.categories.map((c) => c.sortOrder))
       : 0;
-    addCategory({
-      userId,
-      groupId,
-      name,
-      sortOrder: maxSort + 1,
-    });
+    try {
+      await addCategory({
+        userId,
+        groupId,
+        name,
+        sortOrder: maxSort + 1,
+      });
+    } catch {
+      toast.error("Failed to add category");
+    }
   }
 
-  function handleRenameGroup(groupId: Id<"categoryGroups">, name: string) {
-    updateGroup({ id: groupId, name });
+  async function handleRenameGroup(groupId: Id<"categoryGroups">, name: string) {
+    try {
+      await updateGroup({ id: groupId, name });
+    } catch {
+      toast.error("Failed to rename group");
+    }
   }
 
-  function handleDeleteGroup(groupId: Id<"categoryGroups">) {
+  async function handleDeleteGroup(groupId: Id<"categoryGroups">) {
     if (!userId) return;
-    removeGroup({ id: groupId, userId });
+    try {
+      await removeGroup({ id: groupId, userId });
+      toast.success("Group deleted");
+    } catch {
+      toast.error("Failed to delete group");
+    }
   }
 
-  function handleRenameCategory(categoryId: Id<"categories">, name: string) {
-    updateCategory({ id: categoryId, name });
+  async function handleRenameCategory(categoryId: Id<"categories">, name: string) {
+    try {
+      await updateCategory({ id: categoryId, name });
+    } catch {
+      toast.error("Failed to rename category");
+    }
   }
 
-  function handleDeleteCategory(categoryId: Id<"categories">) {
-    removeCategory({ id: categoryId });
+  async function handleDeleteCategory(categoryId: Id<"categories">) {
+    try {
+      await removeCategory({ id: categoryId });
+      toast.success("Category deleted");
+    } catch {
+      toast.error("Failed to delete category");
+    }
   }
 
   const [isAddingGroup, setIsAddingGroup] = useState(false);
   const [newGroupName, setNewGroupName] = useState("");
 
-  function handleAddGroup() {
+  async function handleAddGroup() {
     if (!userId || !groups) return;
     const trimmed = newGroupName.trim();
     if (!trimmed) return;
     const maxSort = Math.max(0, ...groups.map((g) => g.sortOrder));
-    createGroup({ userId, name: trimmed, sortOrder: maxSort + 1 });
-    setNewGroupName("");
-    setIsAddingGroup(false);
+    try {
+      await createGroup({ userId, name: trimmed, sortOrder: maxSort + 1 });
+      setNewGroupName("");
+      setIsAddingGroup(false);
+    } catch {
+      toast.error("Failed to add group");
+    }
   }
 
   if (!userId || !groups || incomeEntries === undefined || allocations === undefined) {
