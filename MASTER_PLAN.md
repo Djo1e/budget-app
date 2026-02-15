@@ -191,7 +191,7 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ---
 
-### Phase 5: Polish + Settings ❌
+### Phase 5: Polish + Settings ✅
 **Goal:** Settings page, responsive polish, landing page, final integration
 
 **Scope:**
