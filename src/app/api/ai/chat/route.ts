@@ -1,4 +1,4 @@
-import { streamText, tool, stepCountIs } from "ai";
+import { streamText, tool, stepCountIs, convertToModelMessages } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod/v4";
 import { isAuthenticated, fetchAuthQuery } from "@/lib/auth-server";
@@ -21,7 +21,8 @@ export async function POST(req: Request) {
   const now = new Date();
   const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
 
-  const { messages } = await req.json();
+  const { messages: uiMessages } = await req.json();
+  const messages = await convertToModelMessages(uiMessages);
 
   const result = streamText({
     model: anthropic("claude-haiku-4-5-20251001"),
