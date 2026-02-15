@@ -258,14 +258,6 @@ export default function DashboardPage() {
         </Card>
       </div>
 
-      {/* Mobile FAB */}
-      <button
-        className="md:hidden fixed bottom-20 right-4 z-40 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center"
-        onClick={() => setDrawerOpen(true)}
-      >
-        <Plus className="h-6 w-6" />
-      </button>
-
       <TransactionFormDrawer
         open={drawerOpen}
         onOpenChange={(open) => {
