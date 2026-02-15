@@ -161,7 +161,7 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ---
 
-### Phase 4: AI Features (NL Entry + Chat) ❌
+### Phase 4: AI Features (NL Entry + Chat) ✅
 **Goal:** AI-powered transaction entry and budget chat
 
 **Scope:**

@@ -58,4 +58,4 @@ Convex vars (`BETTER_AUTH_SECRET`, `SITE_URL`) are set via `npx convex env set`,
 
 ## Project status
 
-See `MASTER_PLAN.md` for full roadmap. Phase 1 (Auth + Onboarding) is complete. Phases 2-5 remain.
+See `MASTER_PLAN.md` for full roadmap. Phases 1-4 complete. Phase 5 (Receipt Scanning + Polish) remains.
