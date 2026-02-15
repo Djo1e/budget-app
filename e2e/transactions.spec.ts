@@ -37,13 +37,7 @@ async function signupAndOnboard(page: import("@playwright/test").Page) {
 }
 
 async function clickAddTransaction(page: import("@playwright/test").Page) {
-  // On desktop the header button shows "Add" text; on mobile only the FAB is visible
-  const headerBtn = page.getByRole("button", { name: "Add" });
-  if (await headerBtn.isVisible().catch(() => false)) {
-    await headerBtn.click();
-  } else {
-    await page.getByRole("button", { name: "Add transaction" }).click();
-  }
+  await page.getByRole("button", { name: "Add transaction" }).click();
 }
 
 // Helper to find visible text (TransactionRow renders both desktop and mobile views)

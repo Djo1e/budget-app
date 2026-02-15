@@ -78,13 +78,7 @@ test.describe("Accounts page", () => {
     await page.goto("/transactions");
     await expect(page.getByRole("heading", { name: "Transactions" })).toBeVisible({ timeout: 10000 });
 
-    // On desktop click header "Add" button, on mobile click the FAB
-    const addBtn = page.getByRole("button", { name: "Add" });
-    if (await addBtn.isVisible().catch(() => false)) {
-      await addBtn.click();
-    } else {
-      await page.getByRole("button", { name: "Add transaction" }).click();
-    }
+    await page.getByRole("button", { name: "Add transaction" }).click();
     await page.fill("#tx-amount", "200");
     await page.fill("#tx-payee", "Test Store");
     await page.getByRole("button", { name: "Add Transaction" }).click();

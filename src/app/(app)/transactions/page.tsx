@@ -225,6 +225,7 @@ export default function TransactionsPage() {
         <h1 className="text-2xl font-bold">Transactions</h1>
         <Button
           size="sm"
+          aria-label="Add transaction"
           onClick={() => {
             setEditingTx(null);
             setDrawerOpen(true);
