@@ -82,3 +82,22 @@ export const updateCurrency = mutation({
     await ctx.db.patch(profile._id, { currency: args.currency });
   },
 });
+
+export const updateName = mutation({
+  args: { name: v.string() },
+  handler: async (ctx, args) => {
+    const identity = await ctx.auth.getUserIdentity();
+    if (!identity) throw new Error("Not authenticated");
+
+    const profile = await ctx.db
+      .query("userProfiles")
+      .withIndex("by_betterAuthUserId", (q) =>
+        q.eq("betterAuthUserId", identity.subject)
+      )
+      .unique();
+
+    if (!profile) throw new Error("Profile not found");
+
+    await ctx.db.patch(profile._id, { name: args.name });
+  },
+});
