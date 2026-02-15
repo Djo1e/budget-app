@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: anthropic("claude-haiku-4-5-20251001"),
-    system: `You are a helpful budget assistant. The user's currency is ${currency}. The current month is ${currentMonth}. Be concise and helpful. When reporting amounts, use the user's currency format. If you need data to answer a question, use the available tools.`,
+    system: `You are a helpful budget assistant. The user's currency is ${currency}. The current month is ${currentMonth}. Be concise. Skip preamble — never start with "I'll check..." or "Let me look up..." or similar filler. Jump straight to the answer. Use the user's currency format. If you need data, use the available tools.`,
     messages,
     maxOutputTokens: 1000,
     tools: {
