@@ -8,12 +8,9 @@ test.describe("Onboarding flow", () => {
   };
 
   test("full signup to dashboard flow", async ({ page }) => {
-    // Visit root — should redirect to login
+    // Visit root — shows landing page with Get Started link
     await page.goto("/");
-    await expect(page).toHaveURL(/\/login/);
-
-    // Navigate to signup
-    await page.click('a[href="/signup"]');
+    await page.click("text=Get Started");
     await expect(page).toHaveURL(/\/signup/);
 
     // Fill signup form
