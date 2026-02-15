@@ -12,8 +12,10 @@
     "test:e2e": "playwright test"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.44",
     "@convex-dev/better-auth": "^0.10.10",
     "@hookform/resolvers": "^5.2.2",
+    "ai": "^6.0.86",
     "better-auth": "^1.4.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
