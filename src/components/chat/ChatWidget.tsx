@@ -14,6 +14,55 @@ function getMessageText(parts: Array<{ type: string; text?: string }>): string {
     .join("");
 }
 
+function renderMarkdown(text: string) {
+  const lines = text.split("\n");
+  const elements: React.ReactNode[] = [];
+  let listItems: string[] = [];
+
+  function flushList() {
+    if (listItems.length === 0) return;
+    elements.push(
+      <ul key={`ul-${elements.length}`} className="list-disc pl-4 space-y-0.5">
+        {listItems.map((item, i) => (
+          <li key={i}>{formatInline(item)}</li>
+        ))}
+      </ul>
+    );
+    listItems = [];
+  }
+
+  function formatInline(s: string): React.ReactNode {
+    const parts: React.ReactNode[] = [];
+    const regex = /\*\*(.+?)\*\*/g;
+    let last = 0;
+    let match;
+    while ((match = regex.exec(s)) !== null) {
+      if (match.index > last) parts.push(s.slice(last, match.index));
+      parts.push(<strong key={match.index}>{match[1]}</strong>);
+      last = regex.lastIndex;
+    }
+    if (last < s.length) parts.push(s.slice(last));
+    return parts.length === 1 ? parts[0] : parts;
+  }
+
+  for (const line of lines) {
+    const trimmed = line.trimStart();
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      listItems.push(trimmed.slice(2));
+    } else {
+      flushList();
+      if (trimmed === "") {
+        elements.push(<div key={`br-${elements.length}`} className="h-1" />);
+      } else {
+        elements.push(<p key={`p-${elements.length}`}>{formatInline(trimmed)}</p>);
+      }
+    }
+  }
+  flushList();
+
+  return <div className="space-y-1">{elements}</div>;
+}
+
 const chatTransport = new DefaultChatTransport({ api: "/api/ai/chat" });
 
 export function ChatWidget() {
@@ -75,19 +124,23 @@ export function ChatWidget() {
                 Ask me about your budget, spending, or accounts.
               </p>
             )}
-            {messages.map((m) => (
-              <div
-                key={m.id}
-                className={cn(
-                  "text-sm rounded-lg px-3 py-2 max-w-[85%]",
-                  m.role === "user"
-                    ? "ml-auto bg-primary text-primary-foreground"
-                    : "bg-muted"
-                )}
-              >
-                {getMessageText(m.parts)}
-              </div>
-            ))}
+            {messages.map((m) => {
+              const text = getMessageText(m.parts);
+              if (!text) return null;
+              return (
+                <div
+                  key={m.id}
+                  className={cn(
+                    "text-sm rounded-lg px-3 py-2 max-w-[85%]",
+                    m.role === "user"
+                      ? "ml-auto bg-primary text-primary-foreground"
+                      : "bg-muted"
+                  )}
+                >
+                  {m.role === "user" ? text : renderMarkdown(text)}
+                </div>
+              );
+            })}
             {isLoading && messages[messages.length - 1]?.role === "user" && (
               <div className="bg-muted text-sm rounded-lg px-3 py-2 max-w-[85%]">
                 <Loader2 className="h-4 w-4 animate-spin" />
