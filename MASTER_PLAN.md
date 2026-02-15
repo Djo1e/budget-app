@@ -191,8 +191,29 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ---
 
-### Phase 5: Receipt Scanning + Polish ❌
-**Goal:** Receipt scanning, responsive polish, final integration
+### Phase 5: Polish + Settings ❌
+**Goal:** Settings page, responsive polish, landing page, final integration
+
+**Scope:**
+- Settings page: currency (read-only after onboarding?), account management, category management link
+- Mobile responsive polish:
+  - Bottom tab nav finalization
+  - Budget sliders touch-friendly
+  - Transaction list swipe actions (edit/delete)
+  - Chat widget mobile-optimized
+- Landing page (unauthenticated) — simple pitch + signup CTA
+- Error handling pass: toast notifications, loading states, empty states
+
+**Tests (write first):**
+- E2E: Full mobile flow via Playwright mobile viewport
+- E2E: Settings page renders and links work
+
+**Deliverable:** Complete MVP ready for deployment
+
+---
+
+### Post-MVP: Receipt Scanning
+**Goal:** AI-powered receipt scanning with vision model
 
 **Scope:**
 - Receipt upload UI (camera capture on mobile, file upload on desktop)
@@ -202,23 +223,6 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
   - User confirms/edits each line item → creates multiple transactions (same payee/date/receipt URL)
 - Receipt image stored in Convex file storage, URL saved on each transaction
 - 30 receipts/month limit — tracked per user per month, error toast at limit
-- Mobile responsive polish:
-  - Bottom tab nav finalization
-  - Budget sliders touch-friendly
-  - Transaction list swipe actions (edit/delete)
-  - Chat widget mobile-optimized
-- Landing page (unauthenticated) — simple pitch + signup CTA
-- Error handling pass: toast notifications, loading states, empty states
-- Settings page: currency (read-only after onboarding?), account management, category management link
-
-**Tests (write first):**
-- E2E: Upload receipt → line items shown → confirm → transactions created
-- E2E: Hit receipt limit → error toast shown
-- E2E: Full mobile flow via Playwright mobile viewport
-- Unit: Receipt parsing response validation
-- Unit: Monthly receipt limit tracking
-
-**Deliverable:** Complete MVP with all features from the spec
 
 ---
 
@@ -231,4 +235,4 @@ After each phase:
 4. Verify Convex real-time reactivity (open two tabs, change data, see both update)
 
 Final integration test after Phase 5:
-- Complete E2E flow: signup → onboarding → add income → assign budget → add transactions (manual + NL + receipt) → chat about spending → verify all numbers are consistent
+- Complete E2E flow: signup → onboarding → add income → assign budget → add transactions (manual + NL) → chat about spending → verify all numbers are consistent
