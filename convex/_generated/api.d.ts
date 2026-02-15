@@ -15,6 +15,7 @@ import type * as categories from "../categories.js";
 import type * as categoryGroups from "../categoryGroups.js";
 import type * as http from "../http.js";
 import type * as incomeEntries from "../incomeEntries.js";
+import type * as payees from "../payees.js";
 import type * as transactions from "../transactions.js";
 import type * as users from "../users.js";
 
@@ -32,6 +33,7 @@ declare const fullApi: ApiFromModules<{
   categoryGroups: typeof categoryGroups;
   http: typeof http;
   incomeEntries: typeof incomeEntries;
+  payees: typeof payees;
   transactions: typeof transactions;
   users: typeof users;
 }>;

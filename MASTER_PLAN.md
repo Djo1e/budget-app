@@ -43,6 +43,7 @@ Building an AI-first, zero-based budgeting app — cheaper and simpler than YNAB
 - **Budget assignment:** Slider/progress bars. Dragging assigns from ready-to-assign pool. Over-assigning allowed — ready to assign goes negative with red warning
 - **Chat:** Floating bubble bottom-right, available on all pages
 - **Mobile:** Bottom tab nav (Dashboard, Budget, Transactions, More). Chat stays as floating bubble
+- **Mobile inputs:** All edit/input interactions on mobile use bottom sheet drawers (`Sheet side="bottom"`) instead of inline editing or modals — feels native. Desktop keeps inline controls. See `AssignmentDrawer.tsx` as reference
 - **Onboarding flow:** Income → categories → assign. Step 1: "How much do you have to budget?" Step 2: Review/customize categories (moderate template, 8-10 groups, ~25 categories). Step 3: Assign with slider UX
 - **First month:** Current month, full budget. No partial month logic
 - **Offline:** Convex optimistic updates + queue (built-in behavior)
@@ -84,7 +85,7 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ## Implementation Phases
 
-### Phase 1: Auth + Onboarding ❌
+### Phase 1: Auth + Onboarding ✅
 **Goal:** User can sign up, log in, and complete onboarding wizard
 
 **Scope:**
@@ -110,7 +111,7 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ---
 
-### Phase 2: Budget Screen + Assignment ❌
+### Phase 2: Budget Screen + Assignment ✅
 **Goal:** Fully functional budget screen with slider-based assignment
 
 **Scope:**
@@ -136,7 +137,7 @@ IncomeEntry: id, userId, month (YYYY-MM), amount, label?, date
 
 ---
 
-### Phase 3: Transactions ❌
+### Phase 3: Transactions ✅
 **Goal:** Manual transaction management, account views, payee system
 
 **Scope:**

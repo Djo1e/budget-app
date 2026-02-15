@@ -24,6 +24,19 @@ export const create = mutation({
   },
 });
 
+export const update = mutation({
+  args: {
+    id: v.id("accounts"),
+    name: v.string(),
+    type: accountTypes,
+    initialBalance: v.number(),
+  },
+  handler: async (ctx, args) => {
+    const { id, ...fields } = args;
+    await ctx.db.patch(id, fields);
+  },
+});
+
 export const remove = mutation({
   args: { id: v.id("accounts") },
   handler: async (ctx, args) => {

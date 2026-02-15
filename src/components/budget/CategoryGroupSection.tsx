@@ -142,11 +142,16 @@ export function CategoryGroupSection({
       </div>
 
       <CollapsibleContent>
-        <div className="grid grid-cols-[1fr_100px_1fr_80px_80px] gap-3 text-xs text-muted-foreground px-0 pb-1 border-b mb-1">
+        <div className="hidden md:grid grid-cols-[1fr_100px_1fr_80px_80px] gap-3 text-xs text-muted-foreground px-0 pb-1 border-b mb-1">
           <span>Category</span>
           <span className="text-right">Assigned</span>
           <span></span>
           <span className="text-right">Spent</span>
+          <span className="text-right">Available</span>
+        </div>
+        <div className="grid md:hidden grid-cols-[1fr_auto_auto] gap-3 text-xs text-muted-foreground px-0 pb-1 border-b mb-1">
+          <span>Category</span>
+          <span className="text-right">Assigned</span>
           <span className="text-right">Available</span>
         </div>
 
