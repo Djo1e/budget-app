@@ -2,6 +2,7 @@
 
 import { useAuthGuard } from "@/hooks/useAuthGuard";
 import { AppShell } from "@/components/layout/AppShell";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { isLoading, isAuthenticated, userProfile } = useAuthGuard();
@@ -18,5 +19,10 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     return null;
   }
 
-  return <AppShell>{children}</AppShell>;
+  return (
+    <>
+      <AppShell>{children}</AppShell>
+      <ChatWidget />
+    </>
+  );
 }
