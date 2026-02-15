@@ -12,6 +12,9 @@ import { TransactionFormDrawer } from "@/components/transactions/TransactionForm
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { NLQuickAdd } from "@/components/transactions/NLQuickAdd";
+import type { ParseTransactionResponse } from "@/lib/ai/parse-transaction";
+import { toast } from "sonner";
 import { Plus, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -22,6 +25,12 @@ export default function DashboardPage() {
   const month = getCurrentMonth();
 
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [nlPrefill, setNlPrefill] = useState<{
+    amount: number;
+    date: string;
+    payeeName: string;
+    categoryId?: Id<"categories">;
+  } | null>(null);
 
   const accounts = useQuery(
     api.accounts.listByUser,
@@ -111,6 +120,23 @@ export default function DashboardPage() {
     });
   }
 
+  function handleNLParsed(result: ParseTransactionResponse) {
+    const allCategories = (categoryGroups ?? []).flatMap((g) => g.categories);
+    const matchedCategory = result.categoryName
+      ? allCategories.find(
+          (c) => c.name.toLowerCase() === result.categoryName!.toLowerCase()
+        )
+      : undefined;
+
+    setNlPrefill({
+      amount: result.amount,
+      date: result.date,
+      payeeName: result.payeeName,
+      categoryId: matchedCategory?._id,
+    });
+    setDrawerOpen(true);
+  }
+
   if (
     !userId ||
     !accounts ||
@@ -142,6 +168,15 @@ export default function DashboardPage() {
       <Link href="/budget">
         <ReadyToAssignBanner amount={readyToAssign} currency={currency} />
       </Link>
+
+      <NLQuickAdd
+        categories={(categoryGroups ?? []).flatMap((g) =>
+          g.categories.map((c) => ({ id: c._id, name: c.name }))
+        )}
+        payees={(payees ?? []).map((p) => ({ id: p._id, name: p.name }))}
+        onParsed={handleNLParsed}
+        onError={() => toast.error("Couldn't parse that. Try the manual form.")}
+      />
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Recent Transactions */}
@@ -233,11 +268,15 @@ export default function DashboardPage() {
 
       <TransactionFormDrawer
         open={drawerOpen}
-        onOpenChange={setDrawerOpen}
+        onOpenChange={(open) => {
+          setDrawerOpen(open);
+          if (!open) setNlPrefill(null);
+        }}
         mode="create"
         accounts={accounts}
         categoryGroups={categoryGroups}
         payees={payees}
+        prefill={nlPrefill ?? undefined}
         onSubmit={handleQuickAdd}
       />
     </div>

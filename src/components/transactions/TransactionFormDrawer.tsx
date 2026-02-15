@@ -44,6 +44,12 @@ interface TransactionFormDrawerProps {
     accountId: Id<"accounts">;
     notes?: string;
   };
+  prefill?: {
+    amount?: number;
+    date?: string;
+    payeeName?: string;
+    categoryId?: Id<"categories">;
+  };
   onSubmit: (data: {
     amount: number;
     date: string;
@@ -63,6 +69,7 @@ export function TransactionFormDrawer({
   categoryGroups,
   payees,
   initialValues,
+  prefill,
   onSubmit,
   onDelete,
 }: TransactionFormDrawerProps) {
@@ -86,15 +93,15 @@ export function TransactionFormDrawer({
         setAccountId(initialValues.accountId);
         setNotes(initialValues.notes ?? "");
       } else {
-        setAmount("");
-        setDate(today);
-        setPayeeName("");
-        setCategoryId("");
+        setAmount(prefill?.amount?.toString() ?? "");
+        setDate(prefill?.date ?? today);
+        setPayeeName(prefill?.payeeName ?? "");
+        setCategoryId(prefill?.categoryId ?? "");
         setAccountId(accounts[0]?._id ?? "");
         setNotes("");
       }
     }
-  }, [open, mode, initialValues, accounts, today]);
+  }, [open, mode, initialValues, accounts, today, prefill]);
 
   const filteredPayees = useMemo(() => {
     if (!payeeName.trim()) return [];

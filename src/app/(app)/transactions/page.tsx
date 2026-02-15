@@ -11,6 +11,9 @@ import {
   TransactionFilters,
   type TransactionFilterValues,
 } from "@/components/transactions/TransactionFilters";
+import { NLQuickAdd } from "@/components/transactions/NLQuickAdd";
+import type { ParseTransactionResponse } from "@/lib/ai/parse-transaction";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 
@@ -22,6 +25,12 @@ export default function TransactionsPage() {
   const [filters, setFilters] = useState<TransactionFilterValues>({});
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [editingTx, setEditingTx] = useState<Doc<"transactions"> | null>(null);
+  const [nlPrefill, setNlPrefill] = useState<{
+    amount: number;
+    date: string;
+    payeeName: string;
+    categoryId?: Id<"categories">;
+  } | null>(null);
 
   const accounts = useQuery(
     api.accounts.listByUser,
@@ -143,6 +152,23 @@ export default function TransactionsPage() {
     [removeTx]
   );
 
+  function handleNLParsed(result: ParseTransactionResponse) {
+    const allCategories = (categoryGroups ?? []).flatMap((g) => g.categories);
+    const matchedCategory = result.categoryName
+      ? allCategories.find(
+          (c) => c.name.toLowerCase() === result.categoryName!.toLowerCase()
+        )
+      : undefined;
+
+    setNlPrefill({
+      amount: result.amount,
+      date: result.date,
+      payeeName: result.payeeName,
+      categoryId: matchedCategory?._id,
+    });
+    setDrawerOpen(true);
+  }
+
   if (
     !userId ||
     !accounts ||
@@ -185,6 +211,15 @@ export default function TransactionsPage() {
           <span className="hidden md:inline">Add</span>
         </Button>
       </div>
+
+      <NLQuickAdd
+        categories={(categoryGroups ?? []).flatMap((g) =>
+          g.categories.map((c) => ({ id: c._id, name: c.name }))
+        )}
+        payees={(payees ?? []).map((p) => ({ id: p._id, name: p.name }))}
+        onParsed={handleNLParsed}
+        onError={() => toast.error("Couldn't parse that. Try the manual form.")}
+      />
 
       <TransactionFilters
         filters={filters}
@@ -239,13 +274,17 @@ export default function TransactionsPage() {
         open={drawerOpen}
         onOpenChange={(open) => {
           setDrawerOpen(open);
-          if (!open) setEditingTx(null);
+          if (!open) {
+            setEditingTx(null);
+            setNlPrefill(null);
+          }
         }}
         mode={editingTx ? "edit" : "create"}
         accounts={accounts}
         categoryGroups={categoryGroups}
         payees={payees}
         initialValues={editInitialValues}
+        prefill={!editingTx ? (nlPrefill ?? undefined) : undefined}
         onSubmit={handleSubmit}
         onDelete={handleDelete}
       />
