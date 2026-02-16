@@ -2,89 +2,117 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Progress } from "@/components/ui/progress";
-import { StepCurrency } from "@/components/onboarding/StepCurrency";
-import { StepAccounts } from "@/components/onboarding/StepAccounts";
-import { StepIncome } from "@/components/onboarding/StepIncome";
-import { StepCategories } from "@/components/onboarding/StepCategories";
-import { StepAssign } from "@/components/onboarding/StepAssign";
-import type { Id } from "../../../convex/_generated/dataModel";
+import { useMutation } from "convex/react";
+import { api } from "../../../convex/_generated/api";
+import { authClient } from "@/lib/auth-client";
+import { StepName } from "@/components/onboarding/StepName";
+import { StepSelection } from "@/components/onboarding/StepSelection";
+import {
+  steps,
+  initialSelections,
+  buildCategoryTemplate,
+  type OnboardingSelections,
+} from "@/lib/onboarding-categories";
 
-const STEPS = ["Currency", "Accounts", "Income", "Categories", "Assign"];
+const TOTAL_STEPS = 1 + steps.length;
 
 export default function OnboardingPage() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [currency, setCurrency] = useState("USD");
-  const [profileId, setProfileId] = useState<Id<"userProfiles"> | null>(null);
+  const [selections, setSelections] = useState<OnboardingSelections>(initialSelections);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
+  const session = authClient.useSession();
+  const createProfile = useMutation(api.users.createProfile);
+  const createDefaultTemplate = useMutation(api.categories.createDefaultTemplate);
+  const completeOnboarding = useMutation(api.users.completeOnboarding);
 
-  const progress = ((currentStep + 1) / STEPS.length) * 100;
+  const progress = ((currentStep + 1) / TOTAL_STEPS) * 100;
 
   function handleNext() {
-    if (currentStep < STEPS.length - 1) {
-      setCurrentStep((s) => s + 1);
-    }
+    setCurrentStep((s) => Math.min(s + 1, TOTAL_STEPS - 1));
   }
 
   function handleBack() {
-    if (currentStep > 0) {
-      setCurrentStep((s) => s - 1);
+    setCurrentStep((s) => Math.max(s - 1, 0));
+  }
+
+  async function handleFinish() {
+    if (!session.data?.user || isSubmitting) return;
+    setIsSubmitting(true);
+
+    try {
+      const profileId = await createProfile({
+        name: selections.name,
+        email: session.data.user.email ?? "",
+      });
+
+      const template = buildCategoryTemplate(selections);
+      await createDefaultTemplate({ userId: profileId, template });
+      await completeOnboarding();
+
+      router.push("/dashboard");
+    } catch {
+      setIsSubmitting(false);
     }
   }
 
-  function handleFinish() {
-    router.push("/dashboard");
+  const hasPartner = selections.household.includes("partner");
+
+  if (currentStep === 0) {
+    return (
+      <div className="space-y-6">
+        <div className="h-1 bg-muted rounded-full overflow-hidden">
+          <div
+            className="h-full bg-primary transition-all duration-300"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+        <StepName
+          name={selections.name}
+          setName={(name) => setSelections((s) => ({ ...s, name }))}
+          onNext={handleNext}
+        />
+      </div>
+    );
+  }
+
+  const stepIndex = currentStep - 1;
+  const stepConfig = steps[stepIndex];
+  const isLastStep = currentStep === TOTAL_STEPS - 1;
+
+  function getSelected(): string[] {
+    const val = selections[stepConfig.key];
+    if (val === null) return [];
+    if (typeof val === "string") return [val];
+    return val;
+  }
+
+  function setSelected(selected: string[]) {
+    setSelections((s) => {
+      if (stepConfig.mode === "single") {
+        return { ...s, [stepConfig.key]: selected[0] ?? null };
+      }
+      return { ...s, [stepConfig.key]: selected };
+    });
   }
 
   return (
     <div className="space-y-6">
-      <div className="space-y-2">
-        <div className="flex justify-between text-sm text-muted-foreground">
-          <span>
-            Step {currentStep + 1} of {STEPS.length}
-          </span>
-          <span>{STEPS[currentStep]}</span>
-        </div>
-        <Progress value={progress} />
+      <div className="h-1 bg-muted rounded-full overflow-hidden">
+        <div
+          className="h-full bg-primary transition-all duration-300"
+          style={{ width: `${progress}%` }}
+        />
       </div>
-
-      {currentStep === 0 && (
-        <StepCurrency
-          currency={currency}
-          setCurrency={setCurrency}
-          onNext={handleNext}
-          setProfileId={setProfileId}
-        />
-      )}
-      {currentStep === 1 && profileId && (
-        <StepAccounts
-          profileId={profileId}
-          onNext={handleNext}
-          onBack={handleBack}
-        />
-      )}
-      {currentStep === 2 && profileId && (
-        <StepIncome
-          profileId={profileId}
-          onNext={handleNext}
-          onBack={handleBack}
-        />
-      )}
-      {currentStep === 3 && profileId && (
-        <StepCategories
-          profileId={profileId}
-          onNext={handleNext}
-          onBack={handleBack}
-        />
-      )}
-      {currentStep === 4 && profileId && (
-        <StepAssign
-          profileId={profileId}
-          currency={currency}
-          onFinish={handleFinish}
-          onBack={handleBack}
-        />
-      )}
+      <StepSelection
+        config={stepConfig}
+        selected={getSelected()}
+        onSelect={setSelected}
+        onNext={isLastStep ? handleFinish : handleNext}
+        onBack={handleBack}
+        isLastStep={isLastStep}
+        showPartnerOption={hasPartner}
+      />
     </div>
   );
 }

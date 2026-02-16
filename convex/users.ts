@@ -20,7 +20,7 @@ export const createProfile = mutation({
   args: {
     name: v.string(),
     email: v.string(),
-    currency: v.string(),
+    currency: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
@@ -39,7 +39,7 @@ export const createProfile = mutation({
       betterAuthUserId: identity.subject,
       email: args.email,
       name: args.name,
-      currency: args.currency,
+      currency: args.currency ?? "USD",
       onboardingComplete: false,
     });
   },
