@@ -44,8 +44,8 @@ export default function DashboardPage() {
     api.payees.listByUser,
     userId ? { userId } : "skip"
   );
-  const incomeEntries = useQuery(
-    api.incomeEntries.listByUserMonth,
+  const monthlyTransactions = useQuery(
+    api.transactions.listByUserMonth,
     userId ? { userId, month } : "skip"
   );
   const allocations = useQuery(
@@ -67,11 +67,11 @@ export default function DashboardPage() {
   const readyToAssign = useMemo(
     () =>
       calculateReadyToAssign(
-        incomeEntries ?? [],
+        monthlyTransactions ?? [],
         allocations ?? [],
         month
       ),
-    [incomeEntries, allocations, month]
+    [monthlyTransactions, allocations, month]
   );
 
   const payeeMap = useMemo(() => {
@@ -146,7 +146,7 @@ export default function DashboardPage() {
     !accounts ||
     !categoryGroups ||
     payees === undefined ||
-    incomeEntries === undefined ||
+    monthlyTransactions === undefined ||
     allocations === undefined ||
     recentTransactions === undefined ||
     allTransactions === undefined
@@ -206,6 +206,7 @@ export default function DashboardPage() {
                     "en-US",
                     { month: "short", day: "numeric" }
                   );
+                  const isIncome = tx.type === "income";
                   return (
                     <div key={tx._id} className="flex items-center justify-between text-sm">
                       <div className="flex items-center gap-2 min-w-0">
@@ -214,8 +215,8 @@ export default function DashboardPage() {
                           {payeeMap[tx.payeeId]?.name ?? "Unknown"}
                         </span>
                       </div>
-                      <span className="font-medium text-destructive shrink-0 ml-2">
-                        -{formatCurrency(tx.amount, currency)}
+                      <span className={`font-medium shrink-0 ml-2 ${isIncome ? "text-green-600 dark:text-green-400" : "text-destructive"}`}>
+                        {isIncome ? "+" : "-"}{formatCurrency(tx.amount, currency)}
                       </span>
                     </div>
                   );
