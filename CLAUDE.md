@@ -50,8 +50,8 @@ Better Auth stores auth tables inside Convex via a component. The chain: `convex
 - `categorySpent = sum(expense transactions for category in month)`
 - `accountBalance = initialBalance - sum(expense transactions)`
 
-### Mobile UX pattern
-On mobile (`<md`), use bottom sheet drawers (`Sheet` with `side="bottom"`) instead of inline editing, modals, or dropdowns for any interaction that requires input. Desktop keeps inline controls. This applies app-wide — budget assignment, transaction forms, filters, etc. See `AssignmentDrawer.tsx` as the reference implementation.
+### Form UX pattern
+On mobile (`<md`), use bottom sheet drawers. On desktop (`>=md`), use centered dialog modals. The `ResponsiveFormContainer` component handles this automatically — it renders a `Sheet` on mobile and a `Dialog` on desktop. Use it for all multi-field form surfaces (account forms, transaction forms, budget assignment). Lightweight actions (dropdown menus, inline renames, filter bars) stay as-is. See `src/components/ui/responsive-form-container.tsx`.
 
 ### Environment variables
 Convex vars (`BETTER_AUTH_SECRET`, `SITE_URL`) are set via `npx convex env set`, not `.env.local`. The `.env.local` file only has `CONVEX_DEPLOYMENT`, `NEXT_PUBLIC_CONVEX_URL`, and `NEXT_PUBLIC_CONVEX_SITE_URL`.
