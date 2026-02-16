@@ -48,7 +48,7 @@ export function ResponsiveFormContainer({
             <SheetTitle>{title}</SheetTitle>
             {description && <SheetDescription>{description}</SheetDescription>}
           </SheetHeader>
-          {children}
+          <div className="px-4 pb-6">{children}</div>
         </SheetContent>
       </Sheet>
     );

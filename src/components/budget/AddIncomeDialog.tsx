@@ -42,7 +42,7 @@ export function AddIncomeDialog({ onAdd, month }: AddIncomeDialogProps) {
         onOpenChange={setOpen}
         title="Add Income"
       >
-        <form onSubmit={handleSubmit} className="px-4 pb-6 space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="income-amount">Amount</Label>
             <Input

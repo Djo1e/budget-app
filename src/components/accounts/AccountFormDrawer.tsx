@@ -70,7 +70,7 @@ export function AccountFormDrawer({
       title={mode === "create" ? "Add Account" : "Edit Account"}
       description={mode === "create" ? "Create a new account" : "Update account details"}
     >
-      <div className="px-4 pb-6 space-y-4">
+      <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="acct-name">Name</Label>
             <Input

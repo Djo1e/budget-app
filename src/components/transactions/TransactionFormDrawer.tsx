@@ -135,7 +135,7 @@ export function TransactionFormDrawer({
       title={mode === "create" ? "Add Transaction" : "Edit Transaction"}
       description={mode === "create" ? "Record a new expense" : "Update transaction details"}
     >
-      <div className="px-4 pb-6 space-y-4">
+      <div className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="tx-amount">Amount</Label>
             <Input

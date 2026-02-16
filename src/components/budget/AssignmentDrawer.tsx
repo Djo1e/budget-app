@@ -75,7 +75,7 @@ export function AssignmentDrawer({
       description="Adjust budget assignment"
       showCloseButton={false}
     >
-      <div className="px-4 pb-6 space-y-6">
+      <div className="space-y-6">
         <Input
           ref={inputRef}
           type="number"
