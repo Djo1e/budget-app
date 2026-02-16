@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from "@/components/ui/sheet";
+import { ResponsiveFormContainer } from "@/components/ui/responsive-form-container";
 import { Slider } from "@/components/ui/slider";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -74,44 +68,43 @@ export function AssignmentDrawer({
   }
 
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" showCloseButton={false} className="rounded-t-xl">
-        <SheetHeader>
-          <SheetTitle>{categoryName}</SheetTitle>
-          <SheetDescription>Adjust budget assignment</SheetDescription>
-        </SheetHeader>
+    <ResponsiveFormContainer
+      open={open}
+      onOpenChange={onOpenChange}
+      title={categoryName}
+      description="Adjust budget assignment"
+      showCloseButton={false}
+    >
+      <div className="px-4 pb-6 space-y-6">
+        <Input
+          ref={inputRef}
+          type="number"
+          min={0}
+          step={0.01}
+          value={inputValue}
+          onChange={(e) => handleInputChange(e.target.value)}
+          className="h-14 text-center text-2xl font-semibold"
+        />
 
-        <div className="px-4 pb-6 space-y-6">
-          <Input
-            ref={inputRef}
-            type="number"
-            min={0}
-            step={0.01}
-            value={inputValue}
-            onChange={(e) => handleInputChange(e.target.value)}
-            className="h-14 text-center text-2xl font-semibold"
-          />
+        <Slider
+          value={[assigned]}
+          max={Math.max(totalIncome, assigned + 100)}
+          step={1}
+          onValueChange={handleSliderChange}
+          onValueCommit={([v]) => onAssignmentCommit(v)}
+        />
 
-          <Slider
-            value={[assigned]}
-            max={Math.max(totalIncome, assigned + 100)}
-            step={1}
-            onValueChange={handleSliderChange}
-            onValueCommit={([v]) => onAssignmentCommit(v)}
-          />
-
-          <div className="flex justify-between text-sm text-muted-foreground">
-            <span>Spent: {formatCurrency(spent, currency)}</span>
-            <span className={cn(available < 0 && "text-destructive")}>
-              Available: {formatCurrency(available, currency)}
-            </span>
-          </div>
-
-          <Button onClick={handleDone} className="w-full">
-            Done
-          </Button>
+        <div className="flex justify-between text-sm text-muted-foreground">
+          <span>Spent: {formatCurrency(spent, currency)}</span>
+          <span className={cn(available < 0 && "text-destructive")}>
+            Available: {formatCurrency(available, currency)}
+          </span>
         </div>
-      </SheetContent>
-    </Sheet>
+
+        <Button onClick={handleDone} className="w-full">
+          Done
+        </Button>
+      </div>
+    </ResponsiveFormContainer>
   );
 }
