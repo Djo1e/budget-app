@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from "@/components/ui/sheet";
+import { ResponsiveFormContainer } from "@/components/ui/responsive-form-container";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -135,16 +129,13 @@ export function TransactionFormDrawer({
   }
 
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" className="rounded-t-xl max-h-[90vh] overflow-y-auto">
-        <SheetHeader>
-          <SheetTitle>{mode === "create" ? "Add Transaction" : "Edit Transaction"}</SheetTitle>
-          <SheetDescription>
-            {mode === "create" ? "Record a new expense" : "Update transaction details"}
-          </SheetDescription>
-        </SheetHeader>
-
-        <div className="px-4 pb-6 space-y-4">
+    <ResponsiveFormContainer
+      open={open}
+      onOpenChange={onOpenChange}
+      title={mode === "create" ? "Add Transaction" : "Edit Transaction"}
+      description={mode === "create" ? "Record a new expense" : "Update transaction details"}
+    >
+      <div className="px-4 pb-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="tx-amount">Amount</Label>
             <Input
@@ -265,7 +256,6 @@ export function TransactionFormDrawer({
             </Button>
           )}
         </div>
-      </SheetContent>
-    </Sheet>
+    </ResponsiveFormContainer>
   );
 }
