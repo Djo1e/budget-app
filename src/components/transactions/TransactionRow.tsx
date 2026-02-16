@@ -23,6 +23,8 @@ export function TransactionRow({
   onEdit,
   onDelete,
 }: TransactionRowProps) {
+  const isIncome = transaction.type === "income";
+
   const formattedDate = new Date(transaction.date + "T00:00:00").toLocaleDateString(
     "en-US",
     { month: "short", day: "numeric" }
@@ -37,10 +39,10 @@ export function TransactionRow({
       >
         <span className="text-muted-foreground">{formattedDate}</span>
         <span className="font-medium truncate">{payeeName}</span>
-        <span className="text-muted-foreground truncate">{categoryName ?? "Uncategorized"}</span>
+        <span className="text-muted-foreground truncate">{isIncome ? "Income" : (categoryName ?? "Uncategorized")}</span>
         <span className="text-muted-foreground truncate">{accountName}</span>
-        <span className="text-right font-medium text-destructive">
-          -{formatCurrency(transaction.amount, currency)}
+        <span className={`text-right font-medium ${isIncome ? "text-green-600 dark:text-green-400" : "text-destructive"}`}>
+          {isIncome ? "+" : "-"}{formatCurrency(transaction.amount, currency)}
         </span>
         <span />
       </div>
@@ -56,14 +58,14 @@ export function TransactionRow({
         >
           <div className="flex items-center justify-between">
             <span className="text-xs text-muted-foreground">{formattedDate}</span>
-            <span className="font-medium text-sm text-destructive">
-              -{formatCurrency(transaction.amount, currency)}
+            <span className={`font-medium text-sm ${isIncome ? "text-green-600 dark:text-green-400" : "text-destructive"}`}>
+              {isIncome ? "+" : "-"}{formatCurrency(transaction.amount, currency)}
             </span>
           </div>
           <div className="flex items-center justify-between mt-0.5">
             <span className="font-medium text-sm truncate">{payeeName}</span>
             <span className="text-xs text-muted-foreground truncate ml-2">
-              {categoryName ?? "Uncategorized"}
+              {isIncome ? "Income" : (categoryName ?? "Uncategorized")}
             </span>
           </div>
         </div>
