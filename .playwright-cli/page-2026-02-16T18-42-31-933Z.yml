@@ -1,0 +1,16 @@
+- generic [ref=e11]:
+  - generic [ref=e36]:
+    - generic [ref=e37]:
+      - heading "Let's get started." [level=1] [ref=e39]
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: First things first, what should we call you?
+        - generic [ref=e42]:
+          - generic [ref=e43]: Name
+          - textbox "Name" [active] [ref=e44]:
+            - /placeholder: Your first name
+    - generic [ref=e45]:
+      - button "Next" [disabled]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]

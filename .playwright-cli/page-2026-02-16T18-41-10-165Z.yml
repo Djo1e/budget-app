@@ -1,0 +1,19 @@
+- generic [active] [ref=e11]:
+  - generic [ref=e29]:
+    - generic [ref=e31]: Log In
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: Email
+        - textbox "Email" [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e38]: Password
+        - textbox "Password" [ref=e39]
+      - button "Log In" [ref=e40]
+    - paragraph [ref=e42]:
+      - text: Don't have an account?
+      - link "Sign up" [ref=e43] [cursor=pointer]:
+        - /url: /signup
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]

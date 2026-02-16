@@ -1,0 +1,22 @@
+- generic [ref=e11]:
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "🛠️What less frequent expenses do you need to prepare for?" [level=1] [ref=e152]
+      - generic [ref=e51]:
+        - button "💳 Annual credit card fees" [ref=e153]:
+          - generic [ref=e154]: 💳
+          - generic [ref=e155]: Annual credit card fees
+        - button "🩺 Medical expenses" [ref=e156]:
+          - generic [ref=e157]: 🩺
+          - generic [ref=e158]: Medical expenses
+        - button "🎨 Taxes or other fees" [ref=e159]:
+          - generic [ref=e160]: 🎨
+          - generic [ref=e161]: Taxes or other fees
+      - button "None of these apply to me" [active] [ref=e162]
+    - generic [ref=e64]:
+      - button "Back" [ref=e65]
+      - button "Next" [ref=e68]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]

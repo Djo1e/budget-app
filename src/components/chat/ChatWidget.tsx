@@ -3,8 +3,14 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useState, useRef, useEffect, type FormEvent } from "react";
-import { MessageCircle, X, Send, Loader2 } from "lucide-react";
+import { MessageCircle, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+} from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 function getMessageText(parts: Array<{ type: string; text?: string }>): string {
@@ -95,29 +101,24 @@ export function ChatWidget() {
 
   return (
     <>
-      {/* Floating bubble */}
-      {!isOpen && (
-        <button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 h-12 w-12 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
-          aria-label="Open chat"
+      <button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 h-12 w-12 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:opacity-90 transition-opacity"
+        aria-label="Open chat"
+      >
+        <MessageCircle className="h-5 w-5" />
+      </button>
+
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetContent
+          side="bottom"
+          showCloseButton
+          className="rounded-t-xl h-[70vh] max-h-[70vh] flex flex-col"
         >
-          <MessageCircle className="h-5 w-5" />
-        </button>
-      )}
+          <SheetHeader>
+            <SheetTitle>Budget Assistant</SheetTitle>
+          </SheetHeader>
 
-      {/* Chat panel */}
-      {isOpen && (
-        <div className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-50 w-[calc(100vw-2rem)] max-w-sm h-[28rem] bg-background border rounded-xl shadow-xl flex flex-col">
-          {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b">
-            <span className="text-sm font-medium">Budget Assistant</span>
-            <button onClick={() => setIsOpen(false)} aria-label="Close chat">
-              <X className="h-4 w-4 text-muted-foreground" />
-            </button>
-          </div>
-
-          {/* Messages */}
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
             {messages.length === 0 && (
               <p className="text-sm text-muted-foreground text-center mt-8">
@@ -149,7 +150,6 @@ export function ChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Input */}
           <form onSubmit={handleSubmit} className="px-4 py-3 border-t flex gap-2">
             <input
               ref={inputRef}
@@ -168,8 +168,8 @@ export function ChatWidget() {
               <Send className="h-4 w-4" />
             </Button>
           </form>
-        </div>
-      )}
+        </SheetContent>
+      </Sheet>
     </>
   );
 }

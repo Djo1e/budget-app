@@ -1,0 +1,25 @@
+- generic [ref=e11]:
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "🍿Which of these subscriptions do you have?" [level=1] [ref=e138]
+      - generic [ref=e51]:
+        - button "🎵 Music" [ref=e139]:
+          - generic [ref=e140]: 🎵
+          - generic [ref=e141]: Music
+        - button "📺 TV streaming" [ref=e142]:
+          - generic [ref=e143]: 📺
+          - generic [ref=e144]: TV streaming
+        - button "💪 Fitness" [ref=e145]:
+          - generic [ref=e146]: 💪
+          - generic [ref=e147]: Fitness
+        - button "📄 Other subscriptions" [ref=e148]:
+          - generic [ref=e149]: 📄
+          - generic [ref=e150]: Other subscriptions
+      - button "I don’t subscribe to any of these" [ref=e151]
+    - generic [ref=e64]:
+      - button "Back" [ref=e65]
+      - button "Next" [active] [ref=e68]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]

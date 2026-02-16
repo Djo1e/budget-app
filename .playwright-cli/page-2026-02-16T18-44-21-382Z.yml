@@ -1,0 +1,33 @@
+- generic [active] [ref=e11]:
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "❤️What else do you want to include in your plan?" [level=1] [ref=e186]
+      - generic [ref=e51]:
+        - button "🍽️ Dining out" [ref=e187]:
+          - generic [ref=e188]: 🍽️
+          - generic [ref=e189]: Dining out
+        - button "🎁 Holidays & gifts" [ref=e190]:
+          - generic [ref=e191]: 🎁
+          - generic [ref=e192]: Holidays & gifts
+        - button "🎠 Entertainment" [ref=e193]:
+          - generic [ref=e194]: 🎠
+          - generic [ref=e195]: Entertainment
+        - button "🌿 Decor & garden" [ref=e196]:
+          - generic [ref=e197]: 🌿
+          - generic [ref=e198]: Decor & garden
+        - button "🧩 Hobbies" [ref=e199]:
+          - generic [ref=e200]: 🧩
+          - generic [ref=e201]: Hobbies
+        - button "👥 My spending money" [ref=e202]:
+          - generic [ref=e203]: 👥
+          - generic [ref=e204]: My spending money
+        - button "💖 Charity" [ref=e205]:
+          - generic [ref=e206]: 💖
+          - generic [ref=e207]: Charity
+    - generic [ref=e64]:
+      - button "Back" [ref=e65]
+      - button "Finish" [disabled]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]

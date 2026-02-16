@@ -1,0 +1,2112 @@
+[ 9370875ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9370875ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371052ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371053ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371109ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371109ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371167ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371167ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371217ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371217ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371277ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371277ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371336ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371336ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371388ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371388ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371446ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371446ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371500ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371501ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371554ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371554ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371610ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371610ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371665ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371665ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371718ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371718ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371771ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371771ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371825ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371825ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371921ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371921ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371974ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9371974ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372026ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372026ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372083ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372083ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372142ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372143ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372203ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372203ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372264ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372265ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372326ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372326ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372380ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372380ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372443ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372443ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372504ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372505ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372565ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372565ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372626ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372626ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372689ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372689ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372750ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372750ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372811ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372811ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372870ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372871ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372932ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372933ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372991ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9372992ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373055ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373055ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373120ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373121ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373217ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373218ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373275ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373275ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373330ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373331ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373388ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373388ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373447ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373447ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373508ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373508ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373569ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373569ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373629ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373630ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373692ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373693ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373755ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:5
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |     ^
+  118 |   );
+  119 | }
+  120 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9373755ms] [ERROR] ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx:117:6
+Parsing ecmascript source code failed
+  115 |         </div>
+  116 |       </SheetContent>
+> 117 |     </Sheet>
+      |      ^^^^^^^
+  118 |   );
+  119 | }
+  120 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/accounts/AccountFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/accounts/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9378898ms] [ERROR] ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx:260:5
+Parsing ecmascript source code failed
+  258 |         </div>
+  259 |       </SheetContent>
+> 260 |     </Sheet>
+      |     ^
+  261 |   );
+  262 | }
+  263 |
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127
+[ 9378899ms] [ERROR] ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx:260:6
+Parsing ecmascript source code failed
+  258 |         </div>
+  259 |       </SheetContent>
+> 260 |     </Sheet>
+      |      ^^^^^^^
+  261 |   );
+  262 | }
+  263 |
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Client Component Browser]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./projects/budget-app/src/components/transactions/TransactionFormDrawer.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Client Component SSR]
+    ./projects/budget-app/src/app/(app)/dashboard/page.tsx [Server Component] @ http://localhost:3000/_next/static/chunks/ccb5b_next_dist_1d10f9da._.js:3127

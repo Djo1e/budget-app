@@ -1,0 +1,24 @@
+- generic [active] [ref=e11]:
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "Who’s in your household?" [level=1] [ref=e50]
+      - generic [ref=e51]:
+        - button "Myself" [ref=e52]:
+          - generic [ref=e53]: Myself
+        - button "My partner" [ref=e54]:
+          - generic [ref=e55]: My partner
+        - button "Kids" [ref=e56]:
+          - generic [ref=e57]: Kids
+        - button "Teens" [ref=e58]:
+          - generic [ref=e59]: Teens
+        - button "Other adults" [ref=e60]:
+          - generic [ref=e61]: Other adults
+        - button "Pets" [ref=e62]:
+          - generic [ref=e63]: Pets
+    - generic [ref=e64]:
+      - button "Back" [ref=e65]
+      - button "Next" [disabled]
+  - region "Notifications alt+T"
+  - button "Open Next.js Dev Tools" [ref=e6] [cursor=pointer]:
+    - img [ref=e7]
+  - alert [ref=e10]
