@@ -96,13 +96,17 @@ export const create = mutation({
     categoryId: v.optional(v.id("categories")),
     accountId: v.id("accounts"),
     notes: v.optional(v.string()),
+    type: v.optional(v.union(v.literal("expense"), v.literal("transfer"), v.literal("income"))),
   },
   handler: async (ctx, args) => {
+    const { type: txType, ...rest } = args;
     const id = await ctx.db.insert("transactions", {
-      ...args,
-      type: "expense" as const,
+      ...rest,
+      type: txType ?? "expense",
     });
-    await autoLearnCategory(ctx, args.userId, args.payeeId);
+    if ((txType ?? "expense") === "expense") {
+      await autoLearnCategory(ctx, args.userId, args.payeeId);
+    }
     return id;
   },
 });

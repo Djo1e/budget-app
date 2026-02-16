@@ -10,7 +10,8 @@ export const accountTypes = v.union(
 
 export const transactionTypes = v.union(
   v.literal("expense"),
-  v.literal("transfer")
+  v.literal("transfer"),
+  v.literal("income")
 );
 
 export default defineSchema({
