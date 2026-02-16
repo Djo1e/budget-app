@@ -80,12 +80,4 @@ export default defineSchema({
   })
     .index("by_userId_month", ["userId", "month"])
     .index("by_categoryId_month", ["categoryId", "month"]),
-
-  incomeEntries: defineTable({
-    userId: v.id("userProfiles"),
-    month: v.string(),
-    amount: v.number(),
-    label: v.optional(v.string()),
-    date: v.string(),
-  }).index("by_userId_month", ["userId", "month"]),
 });
