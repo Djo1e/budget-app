@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetDescription,
-} from "@/components/ui/sheet";
+import { ResponsiveFormContainer } from "@/components/ui/responsive-form-container";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -70,16 +64,13 @@ export function AccountFormDrawer({
   }
 
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="bottom" className="rounded-t-xl">
-        <SheetHeader>
-          <SheetTitle>{mode === "create" ? "Add Account" : "Edit Account"}</SheetTitle>
-          <SheetDescription>
-            {mode === "create" ? "Create a new account" : "Update account details"}
-          </SheetDescription>
-        </SheetHeader>
-
-        <div className="px-4 pb-6 space-y-4">
+    <ResponsiveFormContainer
+      open={open}
+      onOpenChange={onOpenChange}
+      title={mode === "create" ? "Add Account" : "Edit Account"}
+      description={mode === "create" ? "Create a new account" : "Update account details"}
+    >
+      <div className="px-4 pb-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="acct-name">Name</Label>
             <Input
@@ -121,8 +112,7 @@ export function AccountFormDrawer({
           <Button onClick={handleSubmit} className="w-full">
             {mode === "create" ? "Add Account" : "Save Changes"}
           </Button>
-        </div>
-      </SheetContent>
-    </Sheet>
+      </div>
+    </ResponsiveFormContainer>
   );
 }
