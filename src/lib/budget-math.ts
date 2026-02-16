@@ -1,20 +1,19 @@
-type IncomeEntry = { amount: number; month: string };
 type Allocation = { assignedAmount: number; month: string };
 type Transaction = {
   amount: number;
   categoryId?: string;
   date: string;
-  type: "expense" | "transfer";
+  type: "expense" | "transfer" | "income";
 };
 
 export function calculateReadyToAssign(
-  incomeEntries: IncomeEntry[],
+  transactions: Transaction[],
   allocations: Allocation[],
   month: string
 ): number {
-  const totalIncome = incomeEntries
-    .filter((e) => e.month === month)
-    .reduce((sum, e) => sum + e.amount, 0);
+  const totalIncome = transactions
+    .filter((t) => t.type === "income" && t.date.startsWith(month))
+    .reduce((sum, t) => sum + t.amount, 0);
   const totalAllocated = allocations
     .filter((a) => a.month === month)
     .reduce((sum, a) => sum + a.assignedAmount, 0);
@@ -38,10 +37,13 @@ export function calculateCategorySpent(
 
 export function calculateAccountBalance(
   initialBalance: number,
-  transactions: { amount: number; type: "expense" | "transfer" }[]
+  transactions: { amount: number; type: "expense" | "transfer" | "income" }[]
 ): number {
   const totalSpent = transactions
     .filter((t) => t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
-  return initialBalance - totalSpent;
+  const totalIncome = transactions
+    .filter((t) => t.type === "income")
+    .reduce((sum, t) => sum + t.amount, 0);
+  return initialBalance + totalIncome - totalSpent;
 }

@@ -7,21 +7,21 @@ import {
 
 describe("calculateReadyToAssign", () => {
   it("returns income minus allocations", () => {
-    const income = [
-      { amount: 3000, month: "2026-02" },
-      { amount: 1000, month: "2026-02" },
+    const transactions = [
+      { amount: 3000, date: "2026-02-01", type: "income" as const, categoryId: undefined },
+      { amount: 1000, date: "2026-02-15", type: "income" as const, categoryId: undefined },
     ];
     const allocs = [
       { assignedAmount: 1500, month: "2026-02" },
       { assignedAmount: 500, month: "2026-02" },
     ];
-    expect(calculateReadyToAssign(income, allocs, "2026-02")).toBe(2000);
+    expect(calculateReadyToAssign(transactions, allocs, "2026-02")).toBe(2000);
   });
 
   it("returns full income when no allocations", () => {
     expect(
       calculateReadyToAssign(
-        [{ amount: 4000, month: "2026-02" }],
+        [{ amount: 4000, date: "2026-02-01", type: "income" as const, categoryId: undefined }],
         [],
         "2026-02"
       )
@@ -31,7 +31,7 @@ describe("calculateReadyToAssign", () => {
   it("returns negative when over-assigned", () => {
     expect(
       calculateReadyToAssign(
-        [{ amount: 1000, month: "2026-02" }],
+        [{ amount: 1000, date: "2026-02-01", type: "income" as const, categoryId: undefined }],
         [{ assignedAmount: 1500, month: "2026-02" }],
         "2026-02"
       )
@@ -43,15 +43,23 @@ describe("calculateReadyToAssign", () => {
   });
 
   it("filters by month", () => {
-    const income = [
-      { amount: 3000, month: "2026-02" },
-      { amount: 2000, month: "2026-01" },
+    const transactions = [
+      { amount: 3000, date: "2026-02-01", type: "income" as const, categoryId: undefined },
+      { amount: 2000, date: "2026-01-15", type: "income" as const, categoryId: undefined },
     ];
     const allocs = [
       { assignedAmount: 1000, month: "2026-02" },
       { assignedAmount: 500, month: "2026-01" },
     ];
-    expect(calculateReadyToAssign(income, allocs, "2026-02")).toBe(2000);
+    expect(calculateReadyToAssign(transactions, allocs, "2026-02")).toBe(2000);
+  });
+
+  it("ignores expense transactions", () => {
+    const transactions = [
+      { amount: 3000, date: "2026-02-01", type: "income" as const, categoryId: undefined },
+      { amount: 50, date: "2026-02-05", type: "expense" as const, categoryId: "cat1" },
+    ];
+    expect(calculateReadyToAssign(transactions, [], "2026-02")).toBe(3000);
   });
 });
 
@@ -92,6 +100,14 @@ describe("calculateAccountBalance", () => {
       { amount: 100, type: "expense" as const },
     ];
     expect(calculateAccountBalance(5000, txns)).toBe(4850);
+  });
+
+  it("adds income to balance", () => {
+    const txns = [
+      { amount: 3000, type: "income" as const },
+      { amount: 50, type: "expense" as const },
+    ];
+    expect(calculateAccountBalance(1000, txns)).toBe(3950);
   });
 
   it("returns initial balance with no transactions", () => {
