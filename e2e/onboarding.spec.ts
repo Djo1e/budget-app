@@ -71,12 +71,16 @@ test.describe("Onboarding flow", () => {
     await page.click("text=Emergency fund");
     await page.click('button:has-text("Next")');
 
-    // Step 10: Fun spending — select Dining out, click Finish
+    // Step 10: Fun spending — select Dining out, click Next
     await expect(
       page.getByText("What else do you want to include in your plan?")
     ).toBeVisible();
     await page.click("text=Dining out");
-    await page.click('button:has-text("Finish")');
+    await page.click('button:has-text("Next")');
+
+    // Step 11: Accounts — skip
+    await expect(page.getByText("Add your accounts")).toBeVisible();
+    await page.click("text=Skip for now");
 
     // Should land on dashboard
     await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
