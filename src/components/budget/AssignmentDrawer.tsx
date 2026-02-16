@@ -36,14 +36,11 @@ export function AssignmentDrawer({
   const available = assigned - spent;
 
   useEffect(() => {
-    setInputValue(assigned.toFixed(2));
-  }, [assigned]);
-
-  useEffect(() => {
     if (open) {
+      setInputValue(assigned.toFixed(2));
       setTimeout(() => inputRef.current?.select(), 100);
     }
-  }, [open]);
+  }, [open]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleInputChange(value: string) {
     setInputValue(value);
