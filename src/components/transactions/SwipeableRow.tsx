@@ -70,7 +70,7 @@ export function SwipeableRow({ children, onEdit, onDelete }: SwipeableRowProps) 
     <div className="md:hidden relative overflow-hidden">
       <div className="absolute inset-y-0 right-0 flex">
         <button
-          className="w-16 flex items-center justify-center bg-blue-500 text-white"
+          className="w-16 flex items-center justify-center bg-accent text-foreground"
           onClick={handleEdit}
         >
           <Pencil className="h-4 w-4" />

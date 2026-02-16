@@ -100,7 +100,7 @@ export default function AccountsPage() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Accounts</h1>
+        <h1 className="text-xs font-mono tracking-[0.2em] uppercase">Accounts</h1>
         <Button
           size="sm"
           onClick={() => {

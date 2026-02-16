@@ -167,7 +167,7 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <h1 className="text-xs font-mono tracking-[0.2em] uppercase">Dashboard</h1>
 
       <Link href="/budget">
         <ReadyToAssignBanner amount={readyToAssign} currency={currency} />
@@ -187,7 +187,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
-              <CardTitle className="text-base">Recent Transactions</CardTitle>
+              <CardTitle className="text-xs font-mono tracking-[0.2em] uppercase">Recent Transactions</CardTitle>
               <Link href="/transactions">
                 <Button variant="ghost" size="sm">
                   View All
@@ -229,7 +229,7 @@ export default function DashboardPage() {
         <Card>
           <CardHeader>
             <div className="flex items-center justify-between">
-              <CardTitle className="text-base">Accounts</CardTitle>
+              <CardTitle className="text-xs font-mono tracking-[0.2em] uppercase">Accounts</CardTitle>
               <Link href="/accounts">
                 <Button variant="ghost" size="sm">
                   View All

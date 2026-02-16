@@ -61,7 +61,7 @@ export default function OnboardingPage() {
   if (currentStep === 0) {
     return (
       <div className="space-y-6">
-        <div className="h-1 bg-muted rounded-full overflow-hidden">
+        <div className="h-1 bg-muted overflow-hidden">
           <div
             className="h-full bg-primary transition-all duration-300"
             style={{ width: `${progress}%` }}
@@ -98,7 +98,7 @@ export default function OnboardingPage() {
 
   return (
     <div className="space-y-6">
-      <div className="h-1 bg-muted rounded-full overflow-hidden">
+      <div className="h-1 bg-muted overflow-hidden">
         <div
           className="h-full bg-primary transition-all duration-300"
           style={{ width: `${progress}%` }}

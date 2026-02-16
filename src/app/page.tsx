@@ -20,7 +20,7 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a0a] text-white overflow-hidden selection:bg-white selection:text-black">
+    <div className="relative min-h-screen bg-background text-foreground overflow-hidden selection:bg-primary selection:text-primary-foreground">
       {/* Geometric grid accent */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
@@ -60,7 +60,7 @@ export default function LandingPage() {
         <div className="max-w-3xl">
           {/* Overline */}
           <p
-            className="text-xs font-mono tracking-[0.3em] uppercase text-white/40 mb-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
+            className="text-xs font-mono tracking-[0.3em] uppercase text-foreground/40 mb-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
             style={{ animationDelay: "0.1s" }}
           >
             Zero-based budgeting
@@ -73,7 +73,7 @@ export default function LandingPage() {
           >
             Every dollar
             <br />
-            <span className="text-white/30">gets a job.</span>
+            <span className="text-foreground/30">gets a job.</span>
           </h1>
 
           {/* Value props */}
@@ -81,7 +81,7 @@ export default function LandingPage() {
             className="space-y-3 mb-12 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
             style={{ animationDelay: "0.45s" }}
           >
-            <p className="text-base sm:text-lg text-white/50 max-w-md leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground/50 max-w-md leading-relaxed">
               Assign every dollar before you spend it.
               <br />
               Track where it actually goes.
@@ -97,13 +97,13 @@ export default function LandingPage() {
           >
             <Link
               href="/signup"
-              className="inline-flex items-center justify-center h-12 px-8 bg-white text-black font-medium text-sm tracking-wide rounded-none hover:bg-white/90 transition-colors"
+              className="inline-flex items-center justify-center h-12 px-8 bg-primary text-primary-foreground font-medium text-sm tracking-wide rounded-none hover:bg-primary/90 transition-colors"
             >
               Get Started
             </Link>
             <Link
               href="/login"
-              className="text-sm text-white/40 hover:text-white/70 transition-colors tracking-wide"
+              className="text-sm text-foreground/40 hover:text-foreground/70 transition-colors tracking-wide"
             >
               I have an account
             </Link>
@@ -113,7 +113,7 @@ export default function LandingPage() {
         {/* Vertical accent text */}
         <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2">
           <p
-            className="text-[11px] font-mono tracking-[0.4em] uppercase text-white/15 animate-[fadeIn_1s_ease_forwards] opacity-0"
+            className="text-[11px] font-mono tracking-[0.4em] uppercase text-foreground/15 animate-[fadeIn_1s_ease_forwards] opacity-0"
             style={{
               writingMode: "vertical-rl",
               animationDelay: "0.8s",
@@ -126,12 +126,12 @@ export default function LandingPage() {
 
       {/* Bottom rule */}
       <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-6">
-        <div className="h-px bg-white/10" />
+        <div className="h-px bg-border" />
         <div className="flex justify-between items-center mt-4">
-          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/20">
+          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/20">
             Open source
           </span>
-          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-white/20">
+          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/20">
             Built for clarity
           </span>
         </div>

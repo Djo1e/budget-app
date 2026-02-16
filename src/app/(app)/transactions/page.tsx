@@ -222,7 +222,7 @@ export default function TransactionsPage() {
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Transactions</h1>
+        <h1 className="text-xs font-mono tracking-[0.2em] uppercase">Transactions</h1>
         <Button
           size="sm"
           aria-label="Add transaction"

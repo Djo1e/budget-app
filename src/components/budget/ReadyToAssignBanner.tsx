@@ -15,10 +15,10 @@ export function ReadyToAssignBanner({ amount, currency }: ReadyToAssignBannerPro
   return (
     <div
       className={cn(
-        "rounded-lg px-4 py-3 text-center",
+        "px-4 py-3 text-center",
         isNegative && "bg-destructive/10 text-destructive",
         isZero && "bg-muted text-muted-foreground",
-        !isNegative && !isZero && "bg-green-50 text-green-700 dark:bg-green-950 dark:text-green-400"
+        !isNegative && !isZero && "bg-green-950 text-green-400"
       )}
     >
       <p className="text-sm font-medium">Ready to Assign</p>

@@ -31,7 +31,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
       <aside className="fixed inset-y-0 left-0 z-50 hidden w-64 border-r bg-background md:block">
         <div className="flex h-14 items-center border-b px-6">
-          <h1 className="text-lg font-semibold">Budget App</h1>
+          <h1 className="text-xs font-mono tracking-[0.2em] uppercase">Budget</h1>
         </div>
         <nav className="flex flex-col gap-1 p-4">
           {navItems.map((item) => (
@@ -39,9 +39,9 @@ export function AppShell({ children }: { children: ReactNode }) {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent",
+                "flex items-center gap-3 px-3 py-2 text-xs font-mono uppercase tracking-[0.2em] transition-colors hover:bg-accent",
                 pathname.startsWith(item.href)
-                  ? "bg-accent text-accent-foreground"
+                  ? "text-foreground"
                   : "text-muted-foreground"
               )}
             >
@@ -59,9 +59,9 @@ export function AppShell({ children }: { children: ReactNode }) {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex flex-1 flex-col items-center gap-1 py-2 text-xs",
+                "flex flex-1 flex-col items-center gap-1 py-2 text-[10px] font-mono uppercase tracking-[0.15em]",
                 pathname.startsWith(item.href)
-                  ? "text-primary"
+                  ? "text-foreground"
                   : "text-muted-foreground"
               )}
             >

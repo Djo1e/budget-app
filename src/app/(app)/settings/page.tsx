@@ -54,11 +54,11 @@ export default function SettingsPage() {
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
-      <h1 className="text-2xl font-bold">Settings</h1>
+      <h1 className="text-xs font-mono tracking-[0.2em] uppercase">Settings</h1>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Profile</CardTitle>
+          <CardTitle className="text-xs font-mono tracking-[0.2em] uppercase">Profile</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
@@ -106,19 +106,19 @@ export default function SettingsPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Manage</CardTitle>
+          <CardTitle className="text-xs font-mono tracking-[0.2em] uppercase">Manage</CardTitle>
         </CardHeader>
         <CardContent className="space-y-2">
           <Link
             href="/accounts"
-            className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-accent transition-colors"
+            className="flex items-center gap-3 px-3 py-2 hover:bg-accent transition-colors"
           >
             <Landmark className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm font-medium">Manage Accounts</span>
           </Link>
           <Link
             href="/budget"
-            className="flex items-center gap-3 rounded-md px-3 py-2 hover:bg-accent transition-colors"
+            className="flex items-center gap-3 px-3 py-2 hover:bg-accent transition-colors"
           >
             <Wallet className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm font-medium">Manage Categories</span>
