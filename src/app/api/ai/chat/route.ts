@@ -68,7 +68,7 @@ export async function POST(req: Request) {
           month: z.string().describe("Month in YYYY-MM format"),
         }),
         execute: async ({ month }) => {
-          const income = await fetchAuthQuery(api.incomeEntries.listByUserMonth, {
+          const transactions = await fetchAuthQuery(api.transactions.listByUserMonth, {
             userId,
             month,
           });
@@ -76,7 +76,9 @@ export async function POST(req: Request) {
             userId,
             month,
           });
-          const totalIncome = (income as { amount: number }[]).reduce((s, e) => s + e.amount, 0);
+          const totalIncome = (transactions as { amount: number; type: string }[])
+            .filter((t) => t.type === "income")
+            .reduce((s, t) => s + t.amount, 0);
           const totalAllocated = (allocations as { assignedAmount: number }[]).reduce(
             (s, a) => s + a.assignedAmount,
             0

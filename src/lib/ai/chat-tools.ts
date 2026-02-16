@@ -29,10 +29,14 @@ export function formatAccountBalances(
   if (accounts.length === 0) return "No accounts found.";
 
   const lines = accounts.map((acct) => {
-    const spent = transactions
-      .filter((t) => t.accountId === acct._id && t.type === "expense")
+    const acctTx = transactions.filter((t) => t.accountId === acct._id);
+    const spent = acctTx
+      .filter((t) => t.type === "expense")
       .reduce((sum, t) => sum + t.amount, 0);
-    const balance = acct.initialBalance - spent;
+    const income = acctTx
+      .filter((t) => t.type === "income")
+      .reduce((sum, t) => sum + t.amount, 0);
+    const balance = acct.initialBalance + income - spent;
     return `- ${acct.name} (${acct.type}): $${balance.toFixed(2)}`;
   });
 
