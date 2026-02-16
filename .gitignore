@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .worktrees
+
+# playwright
+.playwright-cli/
+.playwright-mcp/
+playwright-report/
+test-results/
