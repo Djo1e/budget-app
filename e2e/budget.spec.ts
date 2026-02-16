@@ -1,42 +1,5 @@
 import { test, expect } from "@playwright/test";
-
-// Helper: create a fresh user and complete onboarding
-async function signupAndOnboard(page: import("@playwright/test").Page) {
-  const email = `budget-test-${Date.now()}-${Math.random().toString(36).slice(2, 7)}@example.com`;
-
-  await page.goto("/signup");
-  await page.fill('#name', "Budget Tester");
-  await page.fill('#email', email);
-  await page.fill('#password', "TestPassword123!");
-  await page.click('button[type="submit"]');
-
-  // Onboarding
-  await expect(page).toHaveURL(/\/onboarding/, { timeout: 10000 });
-
-  // Step 1: Currency — just proceed with USD
-  await page.click('button:has-text("Next")');
-
-  // Step 2: Accounts — add a checking account
-  await page.fill('#accountName', "Checking");
-  await page.fill('#initialBalance', "0");
-  await page.click('button:has-text("Add account")');
-  await expect(page.getByText("Checking")).toBeVisible();
-  await page.click('button:has-text("Next")');
-
-  // Step 3: Income — add $5000
-  await page.fill('#amount', "5000");
-  await page.click('button:has-text("Next")');
-
-  // Step 4: Categories — use defaults
-  await expect(page.getByText("Your categories")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Next")');
-
-  // Step 5: Assign — skip assignment, just finish
-  await expect(page.getByText("Assign your money")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Finish")');
-
-  await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
-}
+import { signupAndOnboard, addAccount, addIncome } from "./helpers";
 
 // Assign money to first category, handling both desktop (inline edit) and mobile (drawer)
 async function assignToFirstCategory(page: import("@playwright/test").Page, amount: string) {
@@ -57,7 +20,9 @@ async function assignToFirstCategory(page: import("@playwright/test").Page, amou
 
 test.describe("Budget page", () => {
   test.beforeEach(async ({ page }) => {
-    await signupAndOnboard(page);
+    await signupAndOnboard(page, "Budget Tester");
+    await addAccount(page, "Checking", 0);
+    await addIncome(page, 5000);
     await page.goto("/budget");
     await expect(page.getByText("Ready to Assign")).toBeVisible({ timeout: 10000 });
   });

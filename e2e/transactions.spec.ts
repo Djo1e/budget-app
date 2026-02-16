@@ -1,40 +1,5 @@
 import { test, expect } from "@playwright/test";
-
-async function signupAndOnboard(page: import("@playwright/test").Page) {
-  const email = `tx-test-${Date.now()}@example.com`;
-
-  await page.goto("/signup");
-  await page.fill('#name', "Tx Tester");
-  await page.fill('#email', email);
-  await page.fill('#password', "TestPassword123!");
-  await page.click('button[type="submit"]');
-
-  await expect(page).toHaveURL(/\/onboarding/, { timeout: 10000 });
-
-  // Step 1: Currency
-  await page.click('button:has-text("Next")');
-
-  // Step 2: Accounts
-  await page.fill('#accountName', "Checking");
-  await page.fill('#initialBalance', "0");
-  await page.click('button:has-text("Add account")');
-  await expect(page.getByText("Checking")).toBeVisible();
-  await page.click('button:has-text("Next")');
-
-  // Step 3: Income
-  await page.fill('#amount', "5000");
-  await page.click('button:has-text("Next")');
-
-  // Step 4: Categories
-  await expect(page.getByText("Your categories")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Next")');
-
-  // Step 5: Assign
-  await expect(page.getByText("Assign your money")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Finish")');
-
-  await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
-}
+import { signupAndOnboard, addAccount } from "./helpers";
 
 async function clickAddTransaction(page: import("@playwright/test").Page) {
   await page.getByRole("button", { name: "Add transaction" }).click();
@@ -47,7 +12,8 @@ function visibleText(page: import("@playwright/test").Page, text: string) {
 
 test.describe("Transactions page", () => {
   test.beforeEach(async ({ page }) => {
-    await signupAndOnboard(page);
+    await signupAndOnboard(page, "Tx Tester");
+    await addAccount(page, "Checking", 0);
     await page.goto("/transactions");
     await expect(page.getByRole("heading", { name: "Transactions" })).toBeVisible({ timeout: 10000 });
   });
@@ -104,9 +70,9 @@ test.describe("Transactions page", () => {
     await page.fill("#tx-amount", "100");
     await page.fill("#tx-payee", "Grocery Store");
 
-    // Select first category — use selectors scoped to the drawer
-    const drawer = page.locator('[data-slot="sheet-content"]');
-    await drawer.locator('[data-slot="select-trigger"]').nth(0).click();
+    // Select first category — scope to dialog/sheet
+    const form = page.getByRole("dialog");
+    await form.locator('[data-slot="select-trigger"]').nth(0).click();
     await page.locator('[data-slot="select-item"]').first().click();
 
     // Submit

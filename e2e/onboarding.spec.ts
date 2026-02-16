@@ -23,7 +23,7 @@ test.describe("Onboarding flow", () => {
     await expect(page).toHaveURL(/\/onboarding/, { timeout: 10000 });
 
     // Step 1: Name
-    await expect(page.getByText("Let\u2019s get started.")).toBeVisible();
+    await expect(page.getByText("Let's get started.")).toBeVisible({ timeout: 10000 });
     await page.fill("#onboarding-name", "TestName");
     await page.click('button:has-text("Next")');
 

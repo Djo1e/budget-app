@@ -1,47 +1,17 @@
 import { test, expect } from "@playwright/test";
-
-async function signupAndOnboard(page: import("@playwright/test").Page) {
-  const email = `acct-test-${Date.now()}@example.com`;
-
-  await page.goto("/signup");
-  await expect(page.locator('#name')).toBeVisible({ timeout: 10000 });
-  await page.fill('#name', "Acct Tester");
-  await page.fill('#email', email);
-  await page.fill('#password', "TestPassword123!");
-  await page.click('button[type="submit"]');
-
-  await expect(page).toHaveURL(/\/onboarding/, { timeout: 10000 });
-
-  await page.click('button:has-text("Next")');
-
-  await page.fill('#accountName', "Checking");
-  await page.fill('#initialBalance', "0");
-  await page.click('button:has-text("Add account")');
-  await expect(page.getByText("Checking")).toBeVisible();
-  await page.click('button:has-text("Next")');
-
-  await page.fill('#amount', "5000");
-  await page.click('button:has-text("Next")');
-
-  await expect(page.getByText("Your categories")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Next")');
-
-  await expect(page.getByText("Assign your money")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Finish")');
-
-  await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
-}
+import { signupAndOnboard, addAccount } from "./helpers";
 
 test.describe("Accounts page", () => {
   test.describe.configure({ mode: "serial" });
 
   test.beforeEach(async ({ page }) => {
-    await signupAndOnboard(page);
+    await signupAndOnboard(page, "Acct Tester");
+    await addAccount(page, "Checking", 0);
     await page.goto("/accounts");
     await expect(page.getByRole("heading", { name: "Accounts" })).toBeVisible({ timeout: 10000 });
   });
 
-  test("shows accounts from onboarding", async ({ page }) => {
+  test("shows accounts created during setup", async ({ page }) => {
     await expect(page.getByText("Checking", { exact: true }).first()).toBeVisible();
   });
 
@@ -50,10 +20,10 @@ test.describe("Accounts page", () => {
 
     await page.fill("#acct-name", "Savings");
     // Select savings type
-    await page.locator('[data-slot="select-trigger"]').first().click();
+    await page.getByRole("dialog").locator('[data-slot="select-trigger"]').first().click();
     await page.getByRole("option", { name: "Savings" }).click();
     await page.fill("#acct-balance", "1000");
-    await page.locator('[data-slot="sheet-content"] button').filter({ hasText: "Add Account" }).click();
+    await page.getByRole("dialog").getByRole("button", { name: "Add Account" }).click();
 
     await expect(page.getByText("Savings")).toBeVisible({ timeout: 5000 });
     await expect(page.getByText("$1,000.00")).toBeVisible();

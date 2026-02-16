@@ -1,39 +1,9 @@
 import { test, expect } from "@playwright/test";
-
-async function signupAndOnboard(page: import("@playwright/test").Page) {
-  const email = `settings-test-${Date.now()}@example.com`;
-
-  await page.goto("/signup");
-  await page.fill('#name', "Settings Tester");
-  await page.fill('#email', email);
-  await page.fill('#password', "TestPassword123!");
-  await page.click('button[type="submit"]');
-
-  await expect(page).toHaveURL(/\/onboarding/, { timeout: 10000 });
-
-  await page.click('button:has-text("Next")');
-
-  await page.fill('#accountName', "Checking");
-  await page.fill('#initialBalance', "0");
-  await page.click('button:has-text("Add account")');
-  await expect(page.getByText("Checking")).toBeVisible();
-  await page.click('button:has-text("Next")');
-
-  await page.fill('#amount', "5000");
-  await page.click('button:has-text("Next")');
-
-  await expect(page.getByText("Your categories")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Next")');
-
-  await expect(page.getByText("Assign your money")).toBeVisible({ timeout: 5000 });
-  await page.click('button:has-text("Finish")');
-
-  await expect(page).toHaveURL(/\/dashboard/, { timeout: 10000 });
-}
+import { signupAndOnboard } from "./helpers";
 
 test.describe("Settings", () => {
   test.beforeEach(async ({ page }) => {
-    await signupAndOnboard(page);
+    await signupAndOnboard(page, "Settings Tester");
     await page.goto("/settings");
     await expect(page.getByRole("heading", { name: "Settings" })).toBeVisible({ timeout: 5000 });
   });
