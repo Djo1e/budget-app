@@ -4,13 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { ResponsiveFormContainer } from "@/components/ui/responsive-form-container";
 import { Plus } from "lucide-react";
 
 interface AddIncomeDialogProps {
@@ -38,18 +32,17 @@ export function AddIncomeDialog({ onAdd, month }: AddIncomeDialogProps) {
   }
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="outline" size="sm">
-          <Plus className="h-4 w-4 mr-1" />
-          Add Income
-        </Button>
-      </DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Add Income</DialogTitle>
-        </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <>
+      <Button variant="outline" size="sm" onClick={() => setOpen(true)}>
+        <Plus className="h-4 w-4 mr-1" />
+        Add Income
+      </Button>
+      <ResponsiveFormContainer
+        open={open}
+        onOpenChange={setOpen}
+        title="Add Income"
+      >
+        <form onSubmit={handleSubmit} className="px-4 pb-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="income-amount">Amount</Label>
             <Input
@@ -89,7 +82,7 @@ export function AddIncomeDialog({ onAdd, month }: AddIncomeDialogProps) {
             <Button type="submit">Add</Button>
           </div>
         </form>
-      </DialogContent>
-    </Dialog>
+      </ResponsiveFormContainer>
+    </>
   );
 }
