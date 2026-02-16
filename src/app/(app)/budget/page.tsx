@@ -27,9 +27,13 @@ export default function BudgetPage() {
     api.categories.listGroupsByUser,
     userId ? { userId } : "skip"
   );
-  const incomeEntries = useQuery(
-    api.incomeEntries.listByUserMonth,
-    userId ? { userId, month } : "skip"
+  const accounts = useQuery(
+    api.accounts.listByUser,
+    userId ? { userId } : "skip"
+  );
+  const payees = useQuery(
+    api.payees.listByUser,
+    userId ? { userId } : "skip"
   );
   const allocations = useQuery(
     api.budgetAllocations.listByUserMonth,
@@ -41,7 +45,8 @@ export default function BudgetPage() {
   );
 
   const upsertAllocation = useMutation(api.budgetAllocations.upsert);
-  const createIncome = useMutation(api.incomeEntries.create);
+  const getOrCreatePayee = useMutation(api.payees.getOrCreate);
+  const createTransaction = useMutation(api.transactions.create);
   const addCategory = useMutation(api.categories.addCategory);
   const updateCategory = useMutation(api.categories.updateCategory);
   const removeCategory = useMutation(api.categories.removeCategory);
@@ -78,8 +83,10 @@ export default function BudgetPage() {
   }, [groups, transactions, month]);
 
   const totalIncome = useMemo(
-    () => (incomeEntries ?? []).reduce((sum, e) => sum + e.amount, 0),
-    [incomeEntries]
+    () => (transactions ?? [])
+      .filter((t) => t.type === "income")
+      .reduce((sum, t) => sum + t.amount, 0),
+    [transactions]
   );
   const totalAssigned = useMemo(
     () => Object.values(allocationMap).reduce((sum, v) => sum + v, 0),
@@ -108,15 +115,22 @@ export default function BudgetPage() {
     [userId, month, upsertAllocation]
   );
 
-  async function handleAddIncome(amount: number, label: string, date: string) {
+  async function handleAddIncome(data: {
+    amount: number;
+    date: string;
+    payeeName: string;
+    accountId: string;
+  }) {
     if (!userId) return;
     try {
-      await createIncome({
+      const payeeId = await getOrCreatePayee({ userId, name: data.payeeName });
+      await createTransaction({
         userId,
-        month,
-        amount,
-        label: label || undefined,
-        date,
+        amount: data.amount,
+        date: data.date,
+        payeeId,
+        accountId: data.accountId as Id<"accounts">,
+        type: "income",
       });
     } catch {
       toast.error("Failed to add income");
@@ -193,7 +207,7 @@ export default function BudgetPage() {
     }
   }
 
-  if (!userId || !groups || incomeEntries === undefined || allocations === undefined) {
+  if (!userId || !groups || !accounts || payees === undefined || allocations === undefined) {
     return (
       <div className="flex justify-center py-8">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary" />
@@ -205,7 +219,7 @@ export default function BudgetPage() {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <MonthSelector month={month} onMonthChange={setMonth} />
-        <AddIncomeDialog onAdd={handleAddIncome} month={month} />
+        <AddIncomeDialog onAdd={handleAddIncome} month={month} accounts={accounts} payees={payees} />
       </div>
 
       <ReadyToAssignBanner amount={readyToAssign} currency={currency} />
