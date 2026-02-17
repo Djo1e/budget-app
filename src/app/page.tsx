@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useConvexAuth } from "convex/react";
 import Link from "next/link";
+import { FluidAnimation } from "@/components/fluid-animation";
 
 export default function LandingPage() {
   const { isAuthenticated, isLoading } = useConvexAuth();
@@ -56,76 +57,73 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <main className="relative z-10 flex flex-col justify-center px-6 sm:px-10 pt-[12vh] sm:pt-[16vh] pb-20">
-        <div className="max-w-3xl">
-          {/* Overline */}
-          <p
-            className="text-xs font-mono tracking-[0.3em] uppercase text-foreground/40 mb-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
-            style={{ animationDelay: "0.1s" }}
-          >
-            Zero-based budgeting
-          </p>
-
-          {/* Headline */}
-          <h1
-            className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
-            style={{ animationDelay: "0.25s" }}
-          >
-            Every dollar
-            <br />
-            <span className="text-foreground/30">gets a job.</span>
-          </h1>
-
-          {/* Value props */}
-          <div
-            className="space-y-3 mb-12 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
-            style={{ animationDelay: "0.45s" }}
-          >
-            <p className="text-base sm:text-lg text-foreground/50 max-w-md leading-relaxed">
-              Assign every dollar before you spend it.
-              <br />
-              Track where it actually goes.
-              <br />
-              Stay in control — not in the dark.
+      <main className="relative z-10 grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-80px)]">
+        {/* Left: Content */}
+        <div className="flex flex-col justify-center px-6 sm:px-10 lg:pl-10 lg:pr-0 pt-[8vh] sm:pt-[12vh] lg:pt-0 pb-20 lg:pb-0">
+          <div className="max-w-xl">
+            <p
+              className="text-xs font-mono tracking-[0.3em] uppercase text-foreground/40 mb-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
+              style={{ animationDelay: "0.1s" }}
+            >
+              Zero-based budgeting
             </p>
-          </div>
 
-          {/* CTA */}
-          <div
-            className="flex items-center gap-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <Link
-              href="/signup"
-              className="inline-flex items-center justify-center h-12 px-8 bg-primary text-primary-foreground font-medium text-sm tracking-wide rounded-none hover:bg-primary/90 transition-colors"
+            <h1
+              className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-8 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
+              style={{ animationDelay: "0.25s" }}
             >
-              Get Started
-            </Link>
-            <Link
-              href="/login"
-              className="text-sm text-foreground/40 hover:text-foreground/70 transition-colors tracking-wide"
+              Every dollar
+              <br />
+              <span className="text-foreground/30">gets a job.</span>
+            </h1>
+
+            <div
+              className="space-y-3 mb-12 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
+              style={{ animationDelay: "0.45s" }}
             >
-              I have an account
-            </Link>
+              <p className="text-base sm:text-lg text-foreground/50 max-w-md leading-relaxed">
+                Assign every dollar before you spend it.
+                <br />
+                Track where it actually goes.
+                <br />
+                Stay in control — not in the dark.
+              </p>
+            </div>
+
+            <div
+              className="flex items-center gap-6 animate-[fadeSlideUp_0.6s_ease_forwards] opacity-0"
+              style={{ animationDelay: "0.6s" }}
+            >
+              <Link
+                href="/signup"
+                className="inline-flex items-center justify-center h-12 px-8 bg-primary text-primary-foreground font-medium text-sm tracking-wide rounded-none hover:bg-primary/90 transition-colors"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/login"
+                className="text-sm text-foreground/40 hover:text-foreground/70 transition-colors tracking-wide"
+              >
+                I have an account
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Vertical accent text */}
-        <div className="hidden lg:block absolute right-10 top-1/2 -translate-y-1/2">
-          <p
-            className="text-[11px] font-mono tracking-[0.4em] uppercase text-foreground/15 animate-[fadeIn_1s_ease_forwards] opacity-0"
-            style={{
-              writingMode: "vertical-rl",
-              animationDelay: "0.8s",
-            }}
-          >
-            Take control of your money
-          </p>
+        {/* Right: 3D pie chart */}
+        <div
+          className="relative hidden lg:block animate-[fadeIn_1.5s_ease_forwards] opacity-0"
+          style={{ animationDelay: "0.3s" }}
+        >
+          <div className="absolute inset-0">
+            <FluidAnimation className="w-full h-full" />
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-[30%] bg-gradient-to-r from-background to-transparent" />
+          </div>
         </div>
       </main>
 
       {/* Bottom rule */}
-      <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-10 pb-6">
+      <div className="absolute bottom-0 left-0 right-0 z-10 px-6 sm:px-10 pb-6">
         <div className="h-px bg-border" />
         <div className="flex justify-between items-center mt-4">
           <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-foreground/20">
