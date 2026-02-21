@@ -9,6 +9,7 @@ import { calculateCategorySpent } from "@/lib/budget-math";
 import { useAuthGuard } from "@/hooks/useAuthGuard";
 import { MonthSelector } from "@/components/budget/MonthSelector";
 import { ReadyToAssignBanner } from "@/components/budget/ReadyToAssignBanner";
+import { SmartSetupBanner } from "@/components/budget/SmartSetupBanner";
 import { CategoryGroupSection } from "@/components/budget/CategoryGroupSection";
 import { AddIncomeDialog } from "@/components/budget/AddIncomeDialog";
 import { Button } from "@/components/ui/button";
@@ -91,6 +92,10 @@ export default function BudgetPage() {
   const totalAssigned = useMemo(
     () => Object.values(allocationMap).reduce((sum, v) => sum + v, 0),
     [allocationMap]
+  );
+  const totalAllocated = useMemo(
+    () => (allocations ?? []).reduce((sum, a) => sum + a.assignedAmount, 0),
+    [allocations]
   );
   const readyToAssign = totalIncome - totalAssigned;
 
@@ -223,6 +228,15 @@ export default function BudgetPage() {
       </div>
 
       <ReadyToAssignBanner amount={readyToAssign} currency={currency} />
+
+      {userId && (
+        <SmartSetupBanner
+          month={month}
+          userId={userId}
+          totalAllocated={totalAllocated}
+          currency={currency}
+        />
+      )}
 
       <div className="space-y-2">
         {groups.map((group) => (
