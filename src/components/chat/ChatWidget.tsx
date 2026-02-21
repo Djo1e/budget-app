@@ -3,7 +3,7 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
 import { useState, useRef, useEffect, type FormEvent } from "react";
-import { MessageCircle, Send, Loader2 } from "lucide-react";
+import { MessageCircle, Send, Loader2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -108,6 +108,9 @@ const chatTransport = new DefaultChatTransport({ api: "/api/ai/chat" });
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [nudges, setNudges] = useState<
+    { title: string; description: string; actionLabel?: string }[]
+  >([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -123,6 +126,15 @@ export function ChatWidget() {
 
   useEffect(() => {
     if (isOpen) inputRef.current?.focus();
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (isOpen) {
+      fetch("/api/ai/nudges")
+        .then((r) => r.json())
+        .then(setNudges)
+        .catch(() => {});
+    }
   }, [isOpen]);
 
   const handleSubmit = async (e: FormEvent) => {
@@ -177,6 +189,48 @@ export function ChatWidget() {
             <StateProvider initialState={{}}>
               <VisibilityProvider>
                 <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
+                  {nudges.length > 0 && (
+                    <div className="space-y-2">
+                      {nudges.map((nudge, i) => (
+                        <div
+                          key={i}
+                          className="rounded-lg border border-blue-500/30 bg-blue-500/10 p-2.5 text-xs space-y-1"
+                        >
+                          <div className="flex justify-between items-start">
+                            <span className="font-medium">{nudge.title}</span>
+                            <button
+                              onClick={() =>
+                                setNudges((prev) =>
+                                  prev.filter((_, j) => j !== i)
+                                )
+                              }
+                              className="text-muted-foreground hover:text-foreground"
+                            >
+                              <X className="h-3 w-3" />
+                            </button>
+                          </div>
+                          <p className="text-muted-foreground">
+                            {nudge.description}
+                          </p>
+                          {nudge.actionLabel && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="text-xs h-6"
+                              onClick={() => {
+                                setNudges((prev) =>
+                                  prev.filter((_, j) => j !== i)
+                                );
+                                setInput(nudge.title);
+                              }}
+                            >
+                              {nudge.actionLabel}
+                            </Button>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
                   {messages.length === 0 && (
                     <p className="text-sm text-muted-foreground text-center mt-8">
                       Ask me about your budget, spending, or accounts.
