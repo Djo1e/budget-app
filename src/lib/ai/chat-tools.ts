@@ -42,3 +42,22 @@ export function formatAccountBalances(
 
   return `Account balances:\n${lines.join("\n")}`;
 }
+
+export function buildBudgetContext(data: {
+  categories: { id: string; name: string; groupName: string }[];
+  accounts: { id: string; name: string; type: string }[];
+  payees: { id: string; name: string }[];
+}): string {
+  const catLines = data.categories.map((c) => `- ${c.name} (group: ${c.groupName}, id: ${c.id})`);
+  const acctLines = data.accounts.map((a) => `- ${a.name} (${a.type}, id: ${a.id})`);
+  const payeeLines = data.payees.map((p) => `- ${p.name} (id: ${p.id})`);
+
+  return [
+    "## User's Categories",
+    catLines.join("\n"),
+    "\n## User's Accounts",
+    acctLines.join("\n"),
+    "\n## Known Payees",
+    payeeLines.join("\n"),
+  ].join("\n");
+}
