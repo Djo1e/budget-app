@@ -1,7 +1,5 @@
 import { streamText } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
-import { pipeJsonRender } from "@json-render/core";
-import { createUIMessageStream, createUIMessageStreamResponse } from "ai";
 import { isAuthenticated, fetchAuthQuery } from "@/lib/auth-server";
 import { api } from "../../../../../convex/_generated/api";
 import { catalog } from "@/lib/json-render/catalog";
@@ -15,7 +13,9 @@ export async function POST(req: Request) {
 
   const userId = userProfile._id;
   const currency = userProfile.currency;
-  const { month } = (await req.json()) as { month: string };
+  const body = await req.json();
+  const month: string = body.context?.month ?? body.month;
+  if (!month) return new Response("Missing month", { status: 400 });
 
   // Get previous month for comparison
   const [y, m] = month.split("-").map(Number);
@@ -84,7 +84,7 @@ export async function POST(req: Request) {
   ].join("\n");
 
   const systemPrompt = [
-    catalog.prompt({ mode: "chat" }),
+    catalog.prompt({ mode: "generate" }),
     "",
     "You are generating a monthly financial review. Use the json-render components to create a visually rich report.",
     "Structure: 1) Summary metrics (use Metric components), 2) Category breakdown (use BarChart or Table), 3) Wins (Card variant=success), 4) Attention areas (Card variant=warning), 5) Month-over-month comparison if data exists, 6) 2-3 actionable suggestions.",
@@ -98,11 +98,6 @@ export async function POST(req: Request) {
     maxOutputTokens: 3000,
   });
 
-  const stream = createUIMessageStream({
-    execute: async ({ writer }) => {
-      writer.merge(pipeJsonRender(result.toUIMessageStream()));
-    },
-  });
-
-  return createUIMessageStreamResponse({ stream });
+  // Stream raw text (JSONL patches) directly to the client for useUIStream
+  return result.toTextStreamResponse();
 }

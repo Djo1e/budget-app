@@ -10,6 +10,7 @@ import { useAuthGuard } from "@/hooks/useAuthGuard";
 import { MonthSelector } from "@/components/budget/MonthSelector";
 import { ReadyToAssignBanner } from "@/components/budget/ReadyToAssignBanner";
 import { SmartSetupBanner } from "@/components/budget/SmartSetupBanner";
+import { MonthlyReview } from "@/components/budget/MonthlyReview";
 import { CategoryGroupSection } from "@/components/budget/CategoryGroupSection";
 import { AddIncomeDialog } from "@/components/budget/AddIncomeDialog";
 import { Button } from "@/components/ui/button";
@@ -260,6 +261,10 @@ export default function BudgetPage() {
           />
         ))}
       </div>
+
+      {month !== getCurrentMonth() && (
+        <MonthlyReview month={month} />
+      )}
 
       {isAddingGroup ? (
         <div className="flex items-center gap-2">
