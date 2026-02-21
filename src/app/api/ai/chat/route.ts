@@ -1,12 +1,10 @@
-import { streamText, tool, stepCountIs, convertToModelMessages, createUIMessageStream, createUIMessageStreamResponse } from "ai";
+import { streamText, tool, stepCountIs, convertToModelMessages } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod/v4";
-import { pipeJsonRender } from "@json-render/core";
 import { isAuthenticated, fetchAuthQuery, fetchAuthMutation } from "@/lib/auth-server";
 import { api } from "../../../../../convex/_generated/api";
 import { formatSpendingByCategory, formatAccountBalances, buildBudgetContext } from "@/lib/ai/chat-tools";
 import { predictCategorySpending, getDayOfMonth, getDaysInMonth } from "@/lib/spending-predictions";
-import { catalog } from "@/lib/json-render/catalog";
 
 export async function POST(req: Request) {
   const session = await isAuthenticated();
@@ -55,11 +53,11 @@ export async function POST(req: Request) {
   });
 
   const systemPrompt = [
-    catalog.prompt({ mode: "chat" }),
+    `You are a budget assistant with FULL read and write access to the user's budget. The user's currency is ${currency}. The current month is ${currentMonth}.`,
     "",
-    `You are a helpful budget assistant. The user's currency is ${currency}. The current month is ${currentMonth}. Be concise. Skip preamble — never start with "I'll check..." or "Let me look up..." or similar filler. Jump straight to the answer. Use the user's currency format. If you need data, use the available tools.`,
+    "CAPABILITIES: You can create transactions, move money between budget categories, set budget allocations, add income, create categories, and query all budget data. USE YOUR TOOLS when the user asks you to do these things. Do not say you cannot do something if you have a tool for it.",
     "",
-    "When creating transactions or modifying budgets, show a confirmation component (TransactionConfirm, BudgetMoveConfirm, or AllocationConfirm) FIRST. Only call the write tool AFTER the user confirms.",
+    "STYLE: Be concise. Skip preamble — never start with \"I'll check...\" or \"Let me look up...\" or similar filler. Jump straight to the answer or action. Format currency amounts with the user's currency symbol.",
     "",
     budgetContext,
   ].join("\n");
@@ -195,7 +193,7 @@ export async function POST(req: Request) {
 
       // ---- Write tools ----
       create_transaction: tool({
-        description: "Create a new transaction. Always show a TransactionConfirm component first for user confirmation. Only call this AFTER the user confirms.",
+        description: "Create a new expense or income transaction",
         inputSchema: z.object({
           amount: z.number(),
           payeeName: z.string(),
@@ -239,7 +237,7 @@ export async function POST(req: Request) {
         },
       }),
       move_budget_money: tool({
-        description: "Move budget allocation from one category to another for a given month. Show BudgetMoveConfirm first.",
+        description: "Move budget allocation from one category to another for a given month",
         inputSchema: z.object({
           fromCategoryName: z.string(),
           toCategoryName: z.string(),
@@ -271,7 +269,7 @@ export async function POST(req: Request) {
         },
       }),
       set_budget_allocation: tool({
-        description: "Set a category's budget allocation for a month. Show AllocationConfirm first.",
+        description: "Set a category's budget allocation for a month",
         inputSchema: z.object({
           categoryName: z.string(),
           amount: z.number(),
@@ -294,7 +292,7 @@ export async function POST(req: Request) {
         },
       }),
       add_income: tool({
-        description: "Add an income transaction. Show TransactionConfirm with type=income first.",
+        description: "Add an income transaction",
         inputSchema: z.object({
           amount: z.number(),
           label: z.string().optional(),
@@ -343,10 +341,5 @@ export async function POST(req: Request) {
     stopWhen: stepCountIs(3),
   });
 
-  const stream = createUIMessageStream({
-    execute: async ({ writer }) => {
-      writer.merge(pipeJsonRender(result.toUIMessageStream()));
-    },
-  });
-  return createUIMessageStreamResponse({ stream });
+  return result.toUIMessageStreamResponse();
 }
