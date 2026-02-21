@@ -5,6 +5,7 @@ import { pipeJsonRender } from "@json-render/core";
 import { isAuthenticated, fetchAuthQuery, fetchAuthMutation } from "@/lib/auth-server";
 import { api } from "../../../../../convex/_generated/api";
 import { formatSpendingByCategory, formatAccountBalances, buildBudgetContext } from "@/lib/ai/chat-tools";
+import { predictCategorySpending, getDayOfMonth, getDaysInMonth } from "@/lib/spending-predictions";
 import { catalog } from "@/lib/json-render/catalog";
 
 export async function POST(req: Request) {
@@ -155,6 +156,40 @@ export async function POST(req: Request) {
               `${g.name}: ${g.categories.map((c) => c.name).join(", ")}`
           );
           return lines.join("\n");
+        },
+      }),
+
+      get_spending_predictions: tool({
+        description: "Get spending pace predictions for the current month — shows which categories are on track to overspend",
+        inputSchema: z.object({
+          month: z.string().describe("Month in YYYY-MM format"),
+        }),
+        execute: async ({ month }) => {
+          const txs = await fetchAuthQuery(api.transactions.listByUserMonth, { userId, month });
+          const allocs = await fetchAuthQuery(api.budgetAllocations.listByUserMonth, { userId, month });
+          const categoryMap: Record<string, string> = {};
+          for (const g of groups as { categories: { _id: string; name: string }[] }[]) {
+            for (const c of g.categories) categoryMap[c._id] = c.name;
+          }
+          const allocMap: Record<string, number> = {};
+          for (const a of allocs as { categoryId: string; assignedAmount: number }[]) allocMap[a.categoryId] = a.assignedAmount;
+
+          const dayOfMonth = getDayOfMonth(month);
+          const daysInMonth = getDaysInMonth(month);
+
+          const predictions: string[] = [];
+          for (const [catId, catName] of Object.entries(categoryMap)) {
+            const spent = (txs as { categoryId?: string; type: string; amount: number }[])
+              .filter((t) => t.categoryId === catId && t.type === "expense")
+              .reduce((s, t) => s + t.amount, 0);
+            const allocated = allocMap[catId] ?? 0;
+            if (spent === 0 && allocated === 0) continue;
+            const pred = predictCategorySpending({ spent, allocated, dayOfMonth, daysInMonth });
+            predictions.push(
+              `${catName}: spent $${spent.toFixed(2)} of $${allocated.toFixed(2)}, projected $${pred.projected.toFixed(2)} (${pred.status})`
+            );
+          }
+          return predictions.length > 0 ? predictions.join("\n") : "No spending data for this month.";
         },
       }),
 
