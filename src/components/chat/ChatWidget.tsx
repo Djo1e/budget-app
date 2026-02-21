@@ -165,28 +165,28 @@ export function ChatWidget() {
             <SheetTitle>Budget Assistant</SheetTitle>
           </SheetHeader>
 
-          <ActionProvider
-            handlers={{
-              confirm_transaction: async () => {
-                await sendMessage({ text: "Confirmed: create transaction" });
-              },
-              confirm_budget_move: async () => {
-                await sendMessage({ text: "Confirmed: move budget" });
-              },
-              confirm_allocation: async () => {
-                await sendMessage({ text: "Confirmed: set allocation" });
-              },
-              apply_suggested_budget: async () => {
-                await sendMessage({
-                  text: "Confirmed: apply suggested budget",
-                });
-              },
-              dismiss: async () => {
-                /* no-op, card dismissed via VisibilityProvider */
-              },
-            }}
-          >
-            <StateProvider initialState={{}}>
+          <StateProvider initialState={{}}>
+            <ActionProvider
+              handlers={{
+                confirm_transaction: async () => {
+                  await sendMessage({ text: "Confirmed: create transaction" });
+                },
+                confirm_budget_move: async () => {
+                  await sendMessage({ text: "Confirmed: move budget" });
+                },
+                confirm_allocation: async () => {
+                  await sendMessage({ text: "Confirmed: set allocation" });
+                },
+                apply_suggested_budget: async () => {
+                  await sendMessage({
+                    text: "Confirmed: apply suggested budget",
+                  });
+                },
+                dismiss: async () => {
+                  /* no-op, card dismissed via VisibilityProvider */
+                },
+              }}
+            >
               <VisibilityProvider>
                 <div className="flex-1 overflow-y-auto px-4 py-3 space-y-3">
                   {nudges.length > 0 && (
@@ -254,8 +254,8 @@ export function ChatWidget() {
                   <div ref={messagesEndRef} />
                 </div>
               </VisibilityProvider>
-            </StateProvider>
-          </ActionProvider>
+            </ActionProvider>
+          </StateProvider>
 
           <form onSubmit={handleSubmit} className="px-4 py-3 border-t flex gap-2">
             <input

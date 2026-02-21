@@ -68,7 +68,7 @@ export async function POST(req: Request) {
   });
 
   const { text: aiResponse } = await generateText({
-    model: anthropic("claude-sonnet-4-5-20250514"),
+    model: anthropic("claude-sonnet-4-20250514"),
     system: `You are a budget advisor. Given spending history, suggest budget allocations for the new month. Return JSON only, no markdown fences. The response must be a JSON object with "allocations" array (each has categoryId, categoryName, suggested amount as number, lastMonthSpent as number, reasoning string) and a "summary" string with 2-3 sentences of advice.`,
     prompt: context,
     maxOutputTokens: 2000,
