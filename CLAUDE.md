@@ -53,9 +53,22 @@ Better Auth stores auth tables inside Convex via a component. The chain: `convex
 ### Form UX pattern
 On mobile (`<md`), use bottom sheet drawers. On desktop (`>=md`), use centered dialog modals. The `ResponsiveFormContainer` component handles this automatically — it renders a `Sheet` on mobile and a `Dialog` on desktop. Use it for all multi-field form surfaces (account forms, transaction forms, budget assignment). Lightweight actions (dropdown menus, inline renames, filter bars) stay as-is. See `src/components/ui/responsive-form-container.tsx`.
 
+### AI features
+All AI routes live under `src/app/api/ai/`. They use the Vercel AI SDK (`ai`, `@ai-sdk/react`, `@ai-sdk/anthropic`) with `claude-sonnet-4-20250514` for complex tasks and `claude-haiku-4-5-20251001` for lightweight parsing. `ANTHROPIC_API_KEY` is set in `.env.local`.
+
+- **Agentic chat** (`/api/ai/chat`): `streamText` with 11 tools (6 read, 5 write). Client uses `useChat` + `DefaultChatTransport`. The `ChatWidget` component (`src/components/chat/ChatWidget.tsx`) renders in a bottom sheet with json-render support (`@json-render/react`). Provider nesting must be `StateProvider > ActionProvider > VisibilityProvider`.
+- **NL quick-add** (`/api/ai/parse-transaction`): Parses natural language into transaction fields. Used by the dashboard and transactions page input bar.
+- **Smart month setup** (`/api/ai/suggest-budget`): `generateText` that returns JSON budget allocation suggestions based on spending history.
+- **Monthly review** (`/api/ai/monthly-review`): `streamText` that generates a narrative financial review.
+- **Proactive nudges** (`/api/ai/nudges`): Pure data analysis (no AI call) that detects overspending, unallocated income, etc.
+- **Spending predictions** (`src/lib/spending-predictions.ts`): Linear pace projection for category spending.
+
+### json-render
+The app uses `@json-render/core`, `@json-render/react`, and `@json-render/shadcn` for AI-generated UI components. Catalog defined in `src/lib/json-render/catalog.ts`, React registry in `src/lib/json-render/registry.tsx`.
+
 ### Environment variables
-Convex vars (`BETTER_AUTH_SECRET`, `SITE_URL`) are set via `npx convex env set`, not `.env.local`. The `.env.local` file only has `CONVEX_DEPLOYMENT`, `NEXT_PUBLIC_CONVEX_URL`, and `NEXT_PUBLIC_CONVEX_SITE_URL`.
+Convex vars (`BETTER_AUTH_SECRET`, `SITE_URL`) are set via `npx convex env set`, not `.env.local`. The `.env.local` file has `CONVEX_DEPLOYMENT`, `NEXT_PUBLIC_CONVEX_URL`, `NEXT_PUBLIC_CONVEX_SITE_URL`, and `ANTHROPIC_API_KEY`.
 
 ## Project status
 
-See `MASTER_PLAN.md` for full roadmap. Phases 1-4 complete. Phase 5 (Receipt Scanning + Polish) remains.
+See `MASTER_PLAN.md` for full roadmap. Phases 1-4 complete. AI intelligence layer (agentic chat, NL quick-add, smart month setup, monthly review, nudges, spending predictions) added. Phase 5 (Receipt Scanning + Polish) remains.
